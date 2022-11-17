@@ -17,7 +17,7 @@ WSSTRUCT  StructProduto
 
 ENDWSSTRUCT
 
-WSSTRUCT StrSendProdut
+WSSTRUCT StrSendProduto
     WSDATA _cEmpresa AS String
     WSDATA _cFilial  AS String
     WSDATA _cCod     AS String
