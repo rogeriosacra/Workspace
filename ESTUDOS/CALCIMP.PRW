@@ -7,7 +7,7 @@ nValProd := 0
 nValImp  := 0
 nTaxaImp := 60
 
-nValProd := Val(FwInputBox("Digite o valor do produto...", ""))
+nValProd := Val(FwInputBox("Digite o valor do produto em R$...", ""))
 nTaxaImp := Val(FwInputBox("Digite o % da alíquota do imposto...", ""))
 nValImp  := nValProd * (nTaxaImp/100)
 
