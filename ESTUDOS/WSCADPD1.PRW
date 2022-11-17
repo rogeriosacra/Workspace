@@ -2,7 +2,7 @@
 #INCLUDE"PROTHEUS.CH"
 #INCLUDE"FWMVCDEF.CH"
 
-//{PROTHEUS.DOC}
+//{PROTHEUS.DOC} WSCADPD1
 
 //RdMake Web Service  SOAP para verificar se  produto existe ou não
 
