@@ -32,7 +32,7 @@ WSSERVICE WSCADPD1 DESCRIPTION "Produtos"//NOME DO WEBSERVICE=NOME DO FONTE, adi
 ENDWSSERVICE   
 
 //Método
-WSMETHOD CAD1_PRODUTO WSRECEIVE StrSendProduto WSSEND StrProduto WSSERVICE WSCADPD1//Método CAD1_PRODUTO recebe StrSendProduto e retorna StrProduto
+WSMETHOD CAD1_PRODUTO WSRECEIVE StrSendProd WSSEND StrProduto WSSERVICE WSCADPD1//Método CAD1_PRODUTO recebe StrSendProduto e retorna StrProduto
 //Ainda sobre a linha 35, WSCADPD1 é o mesmo nome do arquivo .prw; o método CAD1_PRODUTO é o mesmo mencionado na linha 31
 Local cCodProd //Declaração de variável que será usada no processo
 
