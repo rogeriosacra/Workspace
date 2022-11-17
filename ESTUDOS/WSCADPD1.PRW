@@ -13,8 +13,8 @@ WSSTRUCT  StructProduto // Definição da estrutura de retorno que será usada na m
     WSDATA cRETORNO AS String
     WSDATA cSTATUS  AS String
     WSDATA cCODIGO  AS String
-    WSDATA cDESC    AS String Optional
-
+    WSDATA cDESC    AS String Optional //Optional Indica que o retorno desta string não é obrigatório
+ 
 ENDWSSTRUCT
 
 WSSTRUCT StrSendProduto // Definição da estrutura de envio que será usada na montagem do objeto de envio
