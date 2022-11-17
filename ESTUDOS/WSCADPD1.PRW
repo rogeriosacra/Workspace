@@ -62,6 +62,8 @@ Else
 ENDIF
 Return .T.    
 
+
+//Após compilar o webservice, ele aparecerá na lista de serviços ativos do portal do ws 
            
 
 
