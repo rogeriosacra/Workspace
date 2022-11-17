@@ -9,7 +9,7 @@
 //Definição das estruturas utilizadas.É de extrema importância fixar este modelo básico de estrutura do webservice
 //A partir deste modelo é possível efetuar várias implementações 
 
-WSSTRUCT  StructProduto 
+WSSTRUCT  StructProduto // Definição da estrutura de retorno que será usada na montagem do objeto de retorno
     WSDATA cRETORNO AS String
     WSDATA cSTATUS  AS String
     WSDATA cCODIGO  AS String
@@ -17,7 +17,7 @@ WSSTRUCT  StructProduto
 
 ENDWSSTRUCT
 
-WSSTRUCT StrSendProduto
+WSSTRUCT StrSendProduto // Definição da estrutura de envio que será usada na montagem do objeto de envio
     WSDATA _cEmpresa AS String
     WSDATA _cFilial  AS String
     WSDATA _cCod     AS String
