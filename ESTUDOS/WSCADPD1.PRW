@@ -28,7 +28,7 @@ ENDWSSTRUCT
 WSSERVICE WSCADPD1 DESCRIPTION "Produtos"//NOME DO WEBSERVICE=NOME DO FONTE, adicionando descrição
     WSDATA StrProduto  AS StructProduto // aqui, a estrutura criada na linha 11, estão sendo atribuida ao objeto StrProduto
     WSDATA StrSendProd AS StrSendProduto //aqui cria o objeto StrSendProd usando a estrutura StrSendProduto (linha 19) e toda sua estrutura
-    WSMETHOD CAD1_PRODUTO DESCRIPTION "Método de Cadastro de Atualização de Produtos" //Tudo será executado através do método CAD1_PRODUTO
+    WSMETHOD CAD1_PRODUTO DESCRIPTION "Método de Cadastro e Atualização de Produtos" //Tudo será executado através do método CAD1_PRODUTO
 ENDWSSERVICE   
 
 //Método
