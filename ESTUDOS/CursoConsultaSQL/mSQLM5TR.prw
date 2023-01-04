@@ -12,7 +12,7 @@ Função para consulta genérica - cria tela de exibição com pesquisa. Permite copi
 /*/
 
 User Function mSQLM5TR(cQryZZS,cQryCnd)
-	Local cAlias				:= GetNextAlias()
+	Local cAlias				:= GetNextAlias()// Gera o proximo alias disponível automaticamente
 	//Default
 	Default cQryZZS		:= ""
 	Default cQryCnd		:= ""
@@ -23,7 +23,7 @@ User Function mSQLM5TR(cQryZZS,cQryCnd)
 	Private cPsqusa		:= ""
 	Private cGrpOd		:= ""
 	
-	BeginSQL Alias cAlias
+	BeginSQL Alias cAlias //Alias obtido automaticamente na linha 15
 			SELECT
 				ZZS.ZZS_CODE ,
 				ZZS.ZZS_TBMAIN ,
