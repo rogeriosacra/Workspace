@@ -19,6 +19,9 @@ Local ctitulo  := "Consulta SQL"
 Local cVldExc  := ".T."
 Local cVldALt  := ".T."
 
+DbSelectArea(cAlias)
+DbSetOrder(1)
+
 Axcadastro(cAlias, cTitulo, cVldExc, cVldAlt)
 
     
