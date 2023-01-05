@@ -61,7 +61,7 @@ Static Function MnTTela(cSentenca,cPesqui,cGrpOrd)
 	Local oBtnFchr
 	//Default
 	DEFAULT cSentenca		:= ""
-	DEFAULT cPesqui 			:= ""
+	DEFAULT cPesqui 		:= ""
 	DEFAULT cGrpOrd			:= ""
 	//Private
 	Private cConsSQL			:= cSentenca
