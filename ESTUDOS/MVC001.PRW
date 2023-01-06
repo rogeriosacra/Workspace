@@ -125,7 +125,13 @@ Static Function MenuDef()
     Local aRotina := {}
           aRotina := FwMvcMenu("MVC001")  
 
-          Add OPTION aRotina TITLE 'Informacao' ACTION 'U_INFMVC()'	OPERATION 6 ACCESS 0//1-PESQ, 2-VISU, 3-INC, 4-ALT,5-EXCLU, 6 OUTRAS, 7-COP
+        Add OPTION aRotina TITLE 'Visualizar' ACTION 'VIEWDEF.MVC001'  		OPERATION 2 ACCESS 0
+		Add OPTION aRotina TITLE 'Incluir'    ACTION 'VIEWDEF.MVC001'  		OPERATION 3 ACCESS 0
+		Add OPTION aRotina TITLE 'Alterar'    ACTION 'VIEWDEF.MVC001' 		OPERATION 4 ACCESS 0
+		Add OPTION aRotina TITLE 'Excluir' 	  ACTION 'VIEWDEF.MVC001'     	OPERATION 5 ACCESS 0
+		Add OPTION aRotina TITLE 'Informacao' ACTION 'U_INFMVC()'     		OPERATION 6 ACCESS 0
+        
+    //1-PESQ, 2-VISU, 3-INC, 4-ALT,5-EXCLU, 6 OUTRAS, 7-COP
 	//Outra maneira de fazer com For/Next seria: 
     //Local aRotinaAux := FwMvcmenu()
     //Local aRotina := {}
