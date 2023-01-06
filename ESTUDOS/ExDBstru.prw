@@ -1,7 +1,7 @@
 #INCLUDE 'totvs.ch'
 #INCLUDE 'protheus.ch'
 
-User Function DBST001()
+User Function ExDbStru()
 
 Local nHandle  := TCLINK("MSSQL/DNS1", "127.0.0.1", 7890 )
 Local cTable   := "ZZB990"
