@@ -37,8 +37,11 @@
 		},
 		{
 			"label": "U_janela"
+		},
+		{
+			"label": "U_ExDbStru"
 		}
 	],
-	"lastProgramExecuted": "U_janela",
+	"lastProgramExecuted": "U_ExDbStru",
 	"lastProgramArgumens": []
 }
