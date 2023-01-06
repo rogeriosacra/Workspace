@@ -125,8 +125,9 @@ Static Function MenuDef()
     Local aRotina := {}
           aRotina := FwMvcMenu("MVC001")  
 
-          Add OPTION aRotina TITLE 'Informacao' ACTION 'U_INFMVC()'	OPERATION 6 ACCESS 0
-	//Outra maneira de fazer com For/Next seria: Local aRotinaAux := FwMvcmenu()
+          Add OPTION aRotina TITLE 'Informacao' ACTION 'U_INFMVC()'	OPERATION 6 ACCESS 0//1-PESQ, 2-VISU, 3-INC, 4-ALT,5-EXCLU, 6 OUTRAS, 7-COP
+	//Outra maneira de fazer com For/Next seria: 
+    //Local aRotinaAux := FwMvcmenu()
     //Local aRotina := {}
     // For Nx := 1 to Len(aRotinaAux)
     // AADD(aRotina, aRotinaAux[Nx])
@@ -149,11 +150,11 @@ Static Function MenuDef()
 */
 
 Return aRotina
-// Criando a Model DEF
+// Criando a Model DEF, nela é definido o modelo de dados, regras de negocio.
 
 Static Function ModelDef()
 	Local oModel := Nil
-	Local oStZZB := FWFormStruct(1,"ZZB")
+	Local oStZZB := FWFormStruct(1,"ZZB") //1-criar estrutura
 	
 	//Instanciando o modelo de dados
 	oModel := MPFormModel():New("ZMODELLM", , , ,)
@@ -172,7 +173,7 @@ Return oModel
 //ViewDEf
 Static Function ViewDef()
 	local oView := Nil
-	Local oModel := FWLoadModel("MVC001")
+	Local oModel := FWLoadModel("MVC001")// PODERIA SER CARREGADO UM MODELO DE DADOS DE OUTRO FONTE ALÉM DO "MVC001"
 	Local oStZZB := FwFormStruct(2,"ZZB")
 
     oStzzB:RemoveField("ZZB_USER")
