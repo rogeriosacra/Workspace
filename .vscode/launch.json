@@ -47,12 +47,11 @@
 				""
 			],
 			"label": "U_mSQLM5TR"
+		},
+		{
+			"label": "SIGAMDI"
 		}
 	],
-	"lastProgramExecuted": "U_mSQLM5TR",
-	"lastProgramArgumens": [],
-	"lastProgramArguments": [
-		"SQLSB101",
-		""
-	]
+	"lastProgramExecuted": "SIGAMDI",
+	"lastProgramArgumens": []
 }
