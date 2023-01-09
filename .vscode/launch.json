@@ -40,8 +40,19 @@
 		},
 		{
 			"label": "U_ExDbStru"
+		},
+		{
+			"args": [
+				"SQLSB101",
+				""
+			],
+			"label": "U_mSQLM5TR"
 		}
 	],
-	"lastProgramExecuted": "U_ExDbStru",
-	"lastProgramArgumens": []
+	"lastProgramExecuted": "U_mSQLM5TR",
+	"lastProgramArgumens": [],
+	"lastProgramArguments": [
+		"SQLSB101",
+		""
+	]
 }

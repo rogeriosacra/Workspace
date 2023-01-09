@@ -85,7 +85,7 @@ Static Function MnTTela(cSentenca,cPesqui,cGrpOrd)
 	//Chama a montagem da Estrutura do MSDialog na Area de Dados
 	MnTEstr()
 	
-	DEFINE MSDIALOG oDlgTela TITLE "Consulta de Dados - "+cConsulta FROM 000, 000 TO nTelaAltu, nTelaLarg COLORS 0, 16777215 PIXEL //STYLE DS_MODALFRAME
+	DEFINE MSDIALOG oDlgTela TITLE "Consulta de Dados - "+cConsulta FROM 000, 000 TO nTelaAltu, nTelaLarg COLORS 0, 16777215 PIXEL STYLE DS_MODALFRAME
 		@ 003,003 GROUP oAreaPesq TO 025, (nTelaLarg/2)-3 PROMPT "Pesquisar:" OF oDlgTela COLOR 0, 16777215 PIXEL
 		@ 010,006 MSGET oGetPesq VAR cGetPesq SIZE (nTelaLarg/2)-12, 010 OF oDlgTela COLORS 0, 16777215 VALID (VldPesq()) PIXEL
 		
@@ -199,6 +199,12 @@ Return Nil
 *	
 *---------------------------------------------------------------------------------------------------------*/
 Static Function btReset()
+  cGetPesq := Space(100)
+  oGetPesq:refresh()
+
+  PopDados()
+
+  oGetPesq:SetFocus()
 
 Return
 
@@ -206,6 +212,11 @@ Return
 *	
 *---------------------------------------------------------------------------------------------------------*/
 Static Function btFecha()
+
+  oDlgTela:End()// Faz encerramento da aplicação, através do botão fechar da MSdialog, que contém a chamada para esta função
+
+
+
 
 Return
 
