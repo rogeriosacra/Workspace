@@ -11,10 +11,10 @@ Função para consulta genérica - cria tela de exibição com pesquisa. Permite copi
 @version 1.0
 /*/
 
-User Function SQLM5TR(cQryZZS,cQryCnd)
+User Function mSQLM5TR(cQryZZS,cQryCnd)
 	Local cAlias				:= GetNextAlias()
 	//Default
-	Default cQryZZS		:= "SQLSB101"
+	Default cQryZZS		:= ""
 	Default cQryCnd		:= ""
 	//Private
 	Private cConsulta	:= cQryZZS
