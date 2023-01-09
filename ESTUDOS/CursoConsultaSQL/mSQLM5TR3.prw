@@ -5,7 +5,8 @@
 #DEFINE STR_PULA Chr(13)+Chr(10)
 
 /*/{Protheus.doc} mSQLM5TR
-Função para consulta genérica - cria tela de exibição com pesquisa. Permite copiar células e exportar os dados para arquivo .xml
+Função para consulta genérica - cria tela de exibição com pesquisa. Permite copiar células e exportar os dados 
+para arquivo .xml
 @author Maicon Macedo
 @since 27 jan. 2020
 @version 1.0
