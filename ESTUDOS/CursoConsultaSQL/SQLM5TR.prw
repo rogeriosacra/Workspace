@@ -11,7 +11,7 @@ Função para consulta genérica - cria tela de exibição com pesquisa. Permite copi
 @version 1.0
 /*/
 
-User Function mSQLM5TR(cQryZZS,cQryCnd)
+User Function SQLM5TR(cQryZZS,cQryCnd)
 	Local cAlias				:= GetNextAlias()
 	//Default
 	Default cQryZZS		:= ""
