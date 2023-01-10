@@ -11,10 +11,10 @@ Função para consulta genérica - cria tela de exibição com pesquisa. Permite copi
 @version 1.0
 /*/
 
-User Function mSQLM5TR(cQryZZS,cQryCnd)
+User Function SQLM5TR(cQryZZS,cQryCnd)
 	Local cAlias				:= GetNextAlias()
 	//Default
-	Default cQryZZS		:= ""
+	Default cQryZZS		:= "SQLSB101"
 	Default cQryCnd		:= ""
 	//Private
 	Private cConsulta	:= cQryZZS
@@ -84,7 +84,7 @@ Static Function MnTTela(cSentenca,cPesqui,cGrpOrd)
 	//Chama a montagem da Estrutura do MSDialog na Area de Dados
 	MnTEstr()
 	
-	DEFINE MSDIALOG oDlgTela TITLE "Consulta de Dados - "+cConsulta FROM 000, 000 TO nTelaAltu, nTelaLarg COLORS 0, 16777215 PIXEL STYLE DS_MODALFRAME
+	DEFINE MSDIALOG oDlgTela TITLE "Consulta de Dados - "+cConsulta FROM 000, 000 TO nTelaAltu, nTelaLarg COLORS 0, 16777215 PIXEL //STYLE DS_MODALFRAME
 		@ 003,003 GROUP oAreaPesq TO 025, (nTelaLarg/2)-3 PROMPT "Pesquisar:" OF oDlgTela COLOR 0, 16777215 PIXEL
 		@ 010,006 MSGET oGetPesq VAR cGetPesq SIZE (nTelaLarg/2)-12, 010 OF oDlgTela COLORS 0, 16777215 VALID (VldPesq()) PIXEL
 		
@@ -180,7 +180,7 @@ Static Function MnTEstr()
 
 Return
 
-/*---------------------------------------------------------------------------------------------------------*
+/*----------------------------------------------------cQrySQ-----------------------------------------------------*
 *	Função PodDados - para popular os dados da grid da tela
 *---------------------------------------------------------------------------------------------------------*/
 Static Function PopDados()
@@ -270,68 +270,6 @@ Return
 *	
 *---------------------------------------------------------------------------------------------------------*/
 Static Function GeraExcel()
-	Local oExcel			:= FWMSEXCEL():New()
-	Local lOk				:= .F.
-	Local cArq				:= ""
-	Local cDirTmp		:= "C:\temp\"
-	Local nAtual			:= 0
-	Local aCampos		:= {}
-	
-	dbSelectArea(cQryNm)
-	(cQryNm)->(dbGoTop())
-	
-	//Atribuindo fortamação ao Excel
-	//https://html-color.codes
-	oExcel:SetTitleSizeFont(12)
-	oExcel:SetTitleBold(.T.)
-	oExcel:SetTitleFrColor("#2200fc")
-	oExcel:SetTitleBgColor("#adadad")
-	oExcel:SetFontSize(11)
-	oExcel:SetFont("Calibri")
-	
-	oExcel:AddWorkSheet(cConsulta)
-	oExcel:AddTable(cConsulta,cConsulta)
-	
-	FOR nAtual := 1 To Len(aCabecAux)
-		cCampoAtu := aCabecAux[nAtual][1]
-		
-		oExcel:AddColumn(cConsulta,cConsulta,cCampoAtu,1,1)
-	NEXT
-	
-	While (cQryNm)->(!EoF())
-		aCampos := {}
-		
-		For nAtual := 1 To Len(aCabecAux)
-			cCampoAtu := aCabecAux[nAtual][2]
-			Aadd( aCampos, & ( (cQryNm)->(cCampoAtu)  ) ) 
-		Next
-		
-		oExcel:AddRow(cConsulta,cConsulta,aCampos)
-		
-		lOk := .T.
-		
-		(cQryNm)->(DbSkip())
-	
-	EndDo
-	
-	oExcel:Activate()
-	
-	cArq := cConsulta + "_" + CriaTrab(NIL, .F.) + ".xml"
-	
-	oExcel:GetXMLFile(cArq)
-
-	If __CopyFile(cArq,cDirTmp + cArq)
-		If lOk
-			oExcelApp := MSExcel():New()
-			oExcelApp:WorkBooks:Open(cDirTmp + cArq)
-			oExcelApp:SetVisible(.T.)
-			oExcelApp:Destroy()
-			
-		MsgInfo("O arquivo "+ cArq+" foi gerado corretamente e se encontra no diretório: "+cDirTmp)
-		EndIf
-	Else
-		MsgAlert("Erro ao copiar o arquivo!")
-	EndIf
 
 Return Nil
 
