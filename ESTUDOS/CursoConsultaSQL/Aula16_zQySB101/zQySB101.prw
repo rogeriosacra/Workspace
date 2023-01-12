@@ -22,7 +22,7 @@ User Function zQySB101()
 	
 	cCndcao := " AND SB1.B1_DATREF BETWEEN " + DtoS(MV_PAR01) + " AND " + DtoS(MV_PAR02) + " "
 	
-	Processa( {||U_mSQLM5TR(STR_NAME,cCndcao)} , , "Processando a consulta " + STR_NAME  )
+	Processa( {||U_SQLM5TR(STR_NAME,cCndcao)} , , "Processando a consulta " + STR_NAME  )
 	
 	
 Return
