@@ -2,7 +2,7 @@
 #include 'parmtype.ch'
 
 //Constantes
-#DEFINE STR_PERG Padr("MDATAPDR",10)
+#DEFINE STR_PERG "MDATAPDR"
 #DEFINE STR_NAME	'SQLSB101'
 
 /*/{Protheus.doc} zQySB101
@@ -22,7 +22,7 @@ User Function zQySB101()
 	
 	cCndcao := " AND SB1.B1_DATREF BETWEEN " + DtoS(MV_PAR01) + " AND " + DtoS(MV_PAR02) + " "
 	
-	Processa( {||U_SQLM5TR(STR_NAME,cCndcao)} , , "Processando a consulta " + STR_NAME  )
+	Processa( {||U_SQLM5TR(STR_NAME,cCndcao)} , , "Processando a consulta " + STR_NAME  ) 
 	
 	
 Return
