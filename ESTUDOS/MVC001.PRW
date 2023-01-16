@@ -125,7 +125,7 @@ Static Function MenuDef()
     Local aRotina := {}
           aRotina := FwMvcMenu("MVC001")  
 
-    Add OPTION aRotina TITLE 'Informacao' ACTION 'U_INFMVC()'     		OPERATION 6 ACCESS 0
+    Add OPTION aRotina TITLE 'Informacao' ACTION 'U_INFMVC()' OPERATION 6 ACCESS 0
         
     //1-PESQ, 2-VISU, 3-INC, 4-ALT,5-EXCLU, 6 OUTRAS, 7-COP
 	//Outra maneira de fazer com For/Next seria: 
