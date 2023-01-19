@@ -15,7 +15,7 @@
 User Function CADSZ1()
 
 Local cAlias   := "SZ1"
-Local ctitulo  := "Cadastro Un.Medidas"
+Local ctitulo  := "Cadastro de Unidade de Medidas"
 Local cVldExc  := ".T."
 Local cVldALt  := ".T."
 
