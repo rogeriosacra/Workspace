@@ -44,7 +44,7 @@ User Function ABRESZ1()
 	dbSetOrder(1)
 
 	
-
+     //Abre o browse
 
 
 	//ASort(aCampos,,,{|x,y|x[1]<y[1]})
