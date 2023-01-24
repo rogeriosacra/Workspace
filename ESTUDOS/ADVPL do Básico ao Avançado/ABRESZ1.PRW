@@ -48,6 +48,8 @@ User Function ABRESZ1()
 
 
 	//ASort(aCampos,,,{|x,y|x[1]<y[1]})
+	//Abre tabela SZ1
+
 	dbSelectArea(cString)
 	mBrowse( 6,1,22,75,cString,aCampos,cCampo)
 
