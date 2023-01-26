@@ -50,8 +50,14 @@
 		},
 		{
 			"label": "SIGAMDI"
+		},
+		{
+			"label": "u_dclvar"
+		},
+		{
+			"label": "u_declvar"
 		}
 	],
-	"lastProgramExecuted": "SIGAMDI",
+	"lastProgramExecuted": "u_declvar",
 	"lastProgramArgumens": []
 }
