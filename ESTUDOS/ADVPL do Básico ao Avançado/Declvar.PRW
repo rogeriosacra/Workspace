@@ -18,7 +18,7 @@ Local cNome   := "Rogerio"
 Local cMsgApr := "Aprovado"
 Local cMsgRep := "Reprovado"
 Local lApro   := .F.
-Local Data    := CTOD("24/01/2023")
+Local dData   := CTOD("24/01/2023")
 Local bBloco  := {||}
 
 Return 
