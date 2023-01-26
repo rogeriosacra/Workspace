@@ -84,7 +84,7 @@ Static Function fExecuta()
          
         //Se houve erro, será mostrado ao usuário
         If ! Empty(cError)
-            MsgStop("Houve um erro na fórmula digitada: "+CRLF+CRLF+cError, "Atenção")
+            MsgStop("Houve um erro na formula digitada: "+CRLF+CRLF+cError, "Atencao")
         else
             MsgInfo("Rotina executada com sucesso!", "Processo Finalizado")
         EndIf

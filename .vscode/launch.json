@@ -56,8 +56,14 @@
 		},
 		{
 			"label": "u_declvar"
+		},
+		{
+			"label": "u_principal"
+		},
+		{
+			"label": "u_secundaria"
 		}
 	],
-	"lastProgramExecuted": "u_declvar",
+	"lastProgramExecuted": "u_secundaria",
 	"lastProgramArgumens": []
 }
