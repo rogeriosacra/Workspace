@@ -62,8 +62,11 @@
 		},
 		{
 			"label": "u_secundaria"
+		},
+		{
+			"label": "u_TestaNum"
 		}
 	],
-	"lastProgramExecuted": "u_principal",
+	"lastProgramExecuted": "u_TestaNum",
 	"lastProgramArgumens": []
 }
