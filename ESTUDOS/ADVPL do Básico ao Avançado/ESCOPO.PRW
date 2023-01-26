@@ -1,58 +1,39 @@
+#INCLUDE "protheus.ch"
 
- #INCLUDE 'PROTHEUS.CH' 
- //-Crie um rdmake chamado escopo.prw
+//atividade escopo de variáveis
 
-//-Insira o include Protheus.ch
-
-//-crie as funções e variaveis conforme a tipagem:
-
-Static cTexto := 'Estatica'
+Static cTexto := "ESTATICA"
 
 User Function Principal()
+	Local nNumero := 10
+	Private dData := Date()
 
-Local   nNumero := 10 
-Private dData   := Date()
+    Filha()
 
-Filha()
-
-Return           
-
-Static Function Filha() 
-
-Local   nNumero    := 20
-Local nResult := 0
-Private lContinua := .T.
-PUBLIC aDados := {1,3,7}
+RETURN
 
 
-ctexto := 'Alterada'
+Static Function Filha()
+	Local nNumero := 20
+	Private lContinua := .T.
+	Public aDados := {1,3,7}
 
-dData := 10
-
-nResult := nNumero + dData
-
-
-Secundaria()
-
-Return
-
-Static Function Secundaria()
-
-Local nNumero := 30
-
-aDados := {0,0,0}
-
-Return
+	cTexto += " NOVAMENTE"+Space(10)
+	dData := dData + nNumero
+	dData += nNumero
 
 
+    U_Secundaria()
 
-/*- Na user function PRINCIPAL chame a função FILHA
-
-- Na static function FILHA chame a user function SECUNDARIA
-
+RETURN
 
 
-Salve, compile e inicie o debug, adicione as variaveis na INSPEÇÃO e veja como elas se comportam ao debugar
+User Function Secundaria()
+	Local nNumero := 30
+	
+	aDados := {0,0,0}
+	nResto := nNumero % 4
+	cTexto := cTexto - " SEM ESPACO"
 
-Perguntas dessa tarefa
-Uma variável Local funciona em uma outra função chamada depois que ela foi declarada? */
+RETURN
+
