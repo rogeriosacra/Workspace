@@ -22,14 +22,20 @@ Static Function Filha()
 Local   nNumero    := 20
 Private lContinua := .T.
 PUBLIC aDados := {1,3,7}
+Local nResult := 0
 
 ctexto := 'Alterada'
+
+dData := 10
+
+nResult := nNumero + dData
+
 
 Secundaria()
 
 Return
 
-User Function Secundaria()
+Static Function Secundaria()
 
 Local nNumero := 30
 
