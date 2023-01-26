@@ -20,9 +20,10 @@ Return
 Static Function Filha() 
 
 Local   nNumero    := 20
+Local nResult := 0
 Private lContinua := .T.
 PUBLIC aDados := {1,3,7}
-Local nResult := 0
+
 
 ctexto := 'Alterada'
 
