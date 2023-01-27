@@ -82,8 +82,11 @@
 		},
 		{
 			"label": "u_testevar"
+		},
+		{
+			"label": "u_numericas"
 		}
 	],
-	"lastProgramExecuted": "u_testevar",
+	"lastProgramExecuted": "u_numericas",
 	"lastProgramArgumens": []
 }

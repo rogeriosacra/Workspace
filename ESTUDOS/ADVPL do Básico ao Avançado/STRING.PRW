@@ -25,6 +25,7 @@ nNumero1 := 100-35.7
 nNumero1 := Int(nNumero1)
 nNumero2 := 333-54.978
 NOROUND( nNumero2,1 )
+ROUND( nNumero2,1 )
 VALTYPE(nNumero1)
 VALTYPE(dData)
 Type("nNUmero2")
