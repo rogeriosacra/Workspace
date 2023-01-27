@@ -8,8 +8,12 @@ User Function Principal()
 	Local nNumero := 10
 	Private dData := Date()
 
+	If nNumero >= 10.5
+	Alert("OK, maior que 10.5")
+	Endif
+
     //Filha()
-    TestaText()
+    U_TestaText()
 
 RETURN
 
@@ -23,6 +27,12 @@ Static Function Filha()
 	dData := dData + nNumero
 	dData += nNumero
 
+	If !lContinua
+		Alert("OK, lContinua é falsa!")
+	else
+		Alert("OK, lContinua é verdadeia!")	
+	EndIF
+
 
     U_Secundaria()
 
@@ -35,6 +45,13 @@ Static Function Secundaria()
 	aDados := {0,0,0}
 	nResto := nNumero % 4
 	cTexto := cTexto - " SEM ESPACO"
+
+	If "ATEU" $ cTexto
+		Alert("Ateu contido!")
+	else
+		Alert("Ateu não Contido!")	
+	ENDIF
+
 
 RETURN
 
