@@ -51,10 +51,12 @@ Static Function Secundaria()
 	nResto := nNumero % 4
 	cTexto := cTexto - " SEM ESPACO"
 
+	MSgInfo("Verificando em cTexto contém string *ATEU*...")
+
 	If "ATEU" $ cTexto
-		Alert("Ateu contido!")
+		Alert("ATEU contido!")
 	else
-		Alert("Ateu não Contido!")	
+		Alert("ATEU não Contido!")	
 	ENDIF
 
 	U_TestaText()
