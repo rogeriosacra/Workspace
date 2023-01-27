@@ -65,8 +65,11 @@
 		},
 		{
 			"label": "u_TestaNum"
+		},
+		{
+			"label": "u_TestaText"
 		}
 	],
-	"lastProgramExecuted": "u_TestaNum",
+	"lastProgramExecuted": "u_principal",
 	"lastProgramArgumens": []
 }
