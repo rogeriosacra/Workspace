@@ -7,21 +7,21 @@ Static cTexto := "ESTATICA"
 User Function Principal()
 	Local nNumero := 10
 	Private dData := Date()
-
+	
 	MSgInfo("Verificando se nNumero >= 10.5")
-
+	
 	If nNumero >= 10.5
-	Alert("OK, maior que 10.5 = "+CValToChar(nNumero))
+		Alert("OK, nNumero maior que 10.5 = "+CValToChar(nNumero))
 	Else 
-	Alert("OK, Menor que 10.5 = "+CValToChar(nNumero))
+		Alert("Não OK, nNumero menor que 10.5 = "+CValToChar(nNumero))
 	Endif
 
-    //Filha()
+    Filha1()
     
 RETURN
 
 
-Static Function Filha()
+Static Function Filha1()
 	Local nNumero := 20
 	Private lContinua := .T.
 	Public aDados := {1,3,7}
@@ -39,7 +39,7 @@ Static Function Filha()
 	EndIF
 
 
-    U_Secundaria()
+    Secundaria()
 
 RETURN
 
@@ -59,7 +59,7 @@ Static Function Secundaria()
 		Alert("ATEU não Contido!")	
 	ENDIF
 
-	U_TestaText()
+	TestaText()
 
 
 RETURN

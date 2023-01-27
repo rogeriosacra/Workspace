@@ -68,8 +68,22 @@
 		},
 		{
 			"label": "u_TestaText"
+		},
+		{
+			"label": "u_filha"
+		},
+		{
+			"args": [],
+			"label": "U_Secundaria"
+		},
+		{
+			"args": [],
+			"label": "u_Principal"
+		},
+		{
+			"label": "u_testevar"
 		}
 	],
-	"lastProgramExecuted": "u_principal",
+	"lastProgramExecuted": "u_testevar",
 	"lastProgramArgumens": []
 }
