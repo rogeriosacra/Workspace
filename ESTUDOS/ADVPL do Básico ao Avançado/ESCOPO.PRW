@@ -8,13 +8,16 @@ User Function Principal()
 	Local nNumero := 10
 	Private dData := Date()
 
+	MSgInfo("Verificando se nNumero >= 10.5")
+
 	If nNumero >= 10.5
-	Alert("OK, maior que 10.5")
+	Alert("OK, maior que 10.5 = "+CValToChar(nNumero))
+	Else 
+	Alert("OK, Menor que 10.5 = "+CValToChar(nNumero))
 	Endif
 
     //Filha()
-    U_TestaText()
-
+    
 RETURN
 
 
@@ -26,6 +29,8 @@ Static Function Filha()
 	cTexto += " NOVAMENTE"+Space(10)
 	dData := dData + nNumero
 	dData += nNumero
+
+	MSgInfo("Verificando se !lContinua é falsa...")
 
 	If !lContinua
 		Alert("OK, lContinua é falsa!")
@@ -51,6 +56,8 @@ Static Function Secundaria()
 	else
 		Alert("Ateu não Contido!")	
 	ENDIF
+
+	U_TestaText()
 
 
 RETURN
