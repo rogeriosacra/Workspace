@@ -85,8 +85,11 @@
 		},
 		{
 			"label": "u_numericas"
+		},
+		{
+			"label": "u_DECISAO"
 		}
 	],
-	"lastProgramExecuted": "u_numericas",
+	"lastProgramExecuted": "u_DECISAO",
 	"lastProgramArgumens": []
 }
