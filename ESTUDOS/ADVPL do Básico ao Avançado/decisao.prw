@@ -6,10 +6,9 @@ User Function DECISAO()
 	Local lContinua := .T.
 
 
-	while lContinua := .T.
-		For nCount = 0  to ncount =10 step 1
-			Alert(nCount)
-			nCount ++
+	while lContinua 
+		For nCount := 0  to  10 
+			Alert("valor de nCount = "+cValtoChar(nCount))			
 			IF nCount == 10
 				lContinua := .F.
 			EndIF
@@ -20,6 +19,7 @@ User Function DECISAO()
 
 
 	for nNumero := 0 to 10
+        Alert("valor de nNumero = "+cValtoChar(nNumero))
 		IF nNumero == 7
 			Exit
 		ENDIF
