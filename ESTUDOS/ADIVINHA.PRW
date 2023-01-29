@@ -2,7 +2,7 @@
 
 User Function ADIVINHA()
 
-Local nNumero := 0
+Local nNumero := -1
 Local nChute := 1
 Local nTentativas := 0
 Local nDificult := 0
@@ -25,10 +25,14 @@ While nChute <> nNumero
           If nNumero == 0
              nNumero := Randomize(1,10)
           EndIF
+
+          Do
               nChute := Val(FwInputBox("Digite um número entre 1 e 10"))
-          If nChute < 1 .OR. nChute > 10
-              MSGAlert("Valor inválido, você deve digitar números entre 1 à 10 " +Cvaltochar(nChute)+ " .Por favor, digite corretamente desta vez!")
-          EndIF
+                If nChute < 1 .OR. nChute > 10
+                  MSGAlert("Valor inválido, você deve digitar números entre 1 à 10 " +Cvaltochar(nChute)+ " .Por favor, digite corretamente desta vez!")
+                  nChute := 0
+                EndIF
+          While nchute <> nNumero
 
           If nChute < nNumero
               nTentativas += 1
@@ -50,7 +54,7 @@ While nChute <> nNumero
           EndIf 
 
     Enddo
-  ENDIF
+  EndIf 
 
   
   
@@ -59,11 +63,15 @@ While nChute <> nNumero
              If nNumero == 0
                 nNumero := Randomize(1,50)
              EndIF
-            nChute := Val(FwInputBox("Digite um número entre 1 e 50")) 
-            If nChute < 1 .OR. nChute > 50
-            MSGAlert("Valor inválido, você deve digitar números entre 1 à 50 " +Cvaltochar(nChute)+ " .Por favor, digite corretamente desta vez!")
-            EndIf
-            
+
+            Do 
+              nChute := Val(FwInputBox("Digite um número entre 1 e 50")) 
+                If nChute < 1 .OR. nChute > 50
+                   MSGAlert("Valor inválido, você deve digitar números entre 1 à 50 " +Cvaltochar(nChute)+ " .Por favor, digite corretamente desta vez!")
+                  nChute := 0
+                EndIf
+            While nChute <> nNumero
+
             If nChute > nNumero
               nTentativas += 1 
               MsgAlert("Você errou na tentativa " +CvalToChar(nTentativas)+ " ,o valor " + Cvaltochar(nChute)+ " é muito alto, tente novamente !")
@@ -91,20 +99,24 @@ While nChute <> nNumero
             If nNumero == 0
                nNumero := Randomize(1,100)
             EndIF
-            nChute := Val(FwInputBox("Digite um número entre 1 e 100")) 
-            If nChute < 1 .OR. nChute > 100
-            MSGAlert("Valor inválido, você deve digitar números entre 1 à 100 " +Cvaltochar(nChute)+ " .Por favor, digite corretamente desta vez!")
-            EndIf
+            
+            While nChute <> nNumero
+              nChute := Val(FwInputBox("Digite um número entre 1 e 100")) 
+                If nChute < 1 .OR. nChute > 100
+                   MSGAlert("Valor inválido, você deve digitar números entre 1 à 100 " +Cvaltochar(nChute)+ " .Por favor, digite corretamente desta vez!")
+                EndIf
+            EndDo
            
            If nChute > nNumero
               nTentativas += 1 
               MsgAlert("Você errou na tentativa " +CvalToChar(nTentativas)+ " ,o valor " + Cvaltochar(nChute)+ " é muito alto, tente novamente !")
-              nChute := 0  
-            elseIf nChute < nNumero
+              nChute := 0
+
+           elseIf nChute < nNumero
                 nTentativas += 1  
                 MsgAlert("Você errou, na tentativa " +CvalToChar(nTentativas)+ " o  valor " + Cvaltochar(nChute)+ " é muito baixo, tente novamente !")
                                     
-            Else 
+           Else 
               nTentativas += 1 
               MSgInfo("Parabéns, você acertou o número " + Cvaltochar(nNumero)+" !")
                
