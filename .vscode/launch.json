@@ -88,8 +88,11 @@
 		},
 		{
 			"label": "u_DECISAO"
+		},
+		{
+			"label": "u_exbloco"
 		}
 	],
-	"lastProgramExecuted": "u_DECISAO",
+	"lastProgramExecuted": "u_exbloco",
 	"lastProgramArgumens": []
 }

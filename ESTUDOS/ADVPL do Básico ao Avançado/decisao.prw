@@ -9,8 +9,10 @@ User Function DECISAO()
 	Local aArray3   := Array(3,3)
 	Local nPos      := 0
 	Local nTamanho  := 0
-	Local nPosA3    := 0
+	Local nPosA3N   := 0
 	Local nPosA3A   := 0
+	Local nPosA3I   := 0
+	Local nTamanhoA3:= 0 
 
 
 
@@ -35,13 +37,18 @@ User Function DECISAO()
 
 	AAdd(aArray3,{"Tiago",40,1.93})	
 	
-	nPosA3:= AScan(aArray3,{| x | x[1] == "Tiago" })
-	nPosA3A:= AScan(aArray3,{| x | x[3] == 1.93})		
+	nPosA3N:= AScan(aArray3,{| x | x[1] == "Tiago" })//4
+	nPosA3A:= AScan(aArray3,{| x | x[3] == 1.93}) //4
+	nPosA3I:= AScan(aArray3,{| x | x[2] == 07}) //3	
+	nTamanhoA3 := Len(aArray3)
+
+	Alert("Tamanho do array A3: "+STR(nTamanhoA3))	
 
 	
 
 	for nNumero := 1 to 10
 		AADD(aArray2,{nNumero})
+		AADD(aArray3,{aArray2[nNUmero]} )
 		Alert("valor de nNumero = "+cValtoChar(nNumero))
 		IF nNumero == 7
 			Alert("valor de nNumero = "+cValtoChar(nNumero)+" , saindo do laço For")
