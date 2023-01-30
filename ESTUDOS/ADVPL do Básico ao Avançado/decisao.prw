@@ -5,7 +5,7 @@ User Function DECISAO()
 	Local nCount    := nNumero := 0
 	Local lContinua := .T.
 	Local aArray1    := {0,0,0}
-	Local aArray2   := {0}
+	Local aArray2   := {}
 	Local aArray3   := Array(3,3)
 	Local nPos      := 0
 	Local nTamanho        := 0
@@ -33,11 +33,11 @@ User Function DECISAO()
 			Alert("valor de nNumero = "+cValtoChar(nNumero)+" , saindo do laço For")
 			Exit
 		ENDIF
-
+	
 	next
 
 	nTamanho := Len(aArray2)-1
-	nPos:= AScan(aArray2,{|x|x[1]== 4})
+	nPos:= AScan(aArray2,{| x | x[1] == 4 })
 	Adel(aArray2,nPos)
 	Asize(aArray2,nTamanho)
 
