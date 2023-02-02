@@ -54,7 +54,7 @@ While nChute <> nNumero
           EndIf 
 
     Enddo
-  EndIf 
+ EndIf 
 
   
   
@@ -64,10 +64,10 @@ While nChute <> nNumero
                 nNumero := Randomize(1,50)
              EndIF
 
-            Do 
+            Do
               nChute := Val(FwInputBox("Digite um número entre 1 e 50")) 
                 If nChute < 1 .OR. nChute > 50
-                   MSGAlert("Valor inválido, você deve digitar números entre 1 à 50 " +Cvaltochar(nChute)+ " .Por favor, digite corretamente desta vez!")
+                   MSGAlert("Valor inválido, você deve digitar números entre 1 à 50.Por favor, digite corretamente desta vez!")
                   nChute := 0
                 EndIf
             While nChute <> nNumero
@@ -85,10 +85,10 @@ While nChute <> nNumero
               MSgInfo("Parabéns, você acertou o número " + Cvaltochar(nNumero)+" !")
                
                If nTentativas >= 2
-                MSgInfo("Total de tentativas foi de " + Cvaltochar(nTentativas)+" tentativas!")
-              ELse 
-                MSgInfo("Ainda por cima acertou na " + Cvaltochar(nTentativas)+"º tentativa!")
-              EndIf
+                 MSgInfo("Total de tentativas foi de " + Cvaltochar(nTentativas)+" tentativas!")
+               ELse 
+                 MSgInfo("Ainda por cima acertou na " + Cvaltochar(nTentativas)+"º tentativa!")
+               EndIf
 
             EndIf   
     EndDo     
