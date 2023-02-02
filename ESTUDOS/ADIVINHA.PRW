@@ -9,7 +9,7 @@ Local nDificult := 0
 Local lNdig := .F.
 
 
-MsgInfo("Jogo ADIVINHE O NÚMERO !")
+MsgInfo("Jogo **ADIVINHE O NÚMERO** !")
 MsgInfo("Tente adivinhar o número que está na memória do computador!!!")
 
 
@@ -27,10 +27,10 @@ While nChute <> nNumero
              nNumero := Randomize(1,10)
           EndIF
 
-          While lNdig == .F.
+          While !lNdig 
               nChute := Val(FwInputBox("Digite um número entre 1 e 10"))
                 If nChute < 1 .OR. nChute > 10
-                  MSGAlert("Valor inválido, você deve digitar números entre 1 à 10 e vc digitou:" +Cvaltochar(nChute)+ " .Por favor, digite corretamente desta vez!")
+                  MSGAlert("Valor inválido, o número deve estar entre 1 e 10 e vc digitou: " +Cvaltochar(nChute)+ " .Por favor, digite corretamente desta vez!")
                   nChute := 0
                 else
                   lNdig := .T.
@@ -39,20 +39,20 @@ While nChute <> nNumero
 
           If nChute < nNumero
               nTentativas += 1
-              MsgAlert("Você errou, na tentativa " +CvalToChar(nTentativas)+ " o  valor " + Cvaltochar(nChute)+ " é muito baixo, tente novamente !")
+              MsgAlert("Você errou, na tentativa " +CvalToChar(nTentativas)+ "º, o  valor " + Cvaltochar(nChute)+ " é muito baixo, tente novamente !")
               nChute := 0
               lNdig := .F.
           ElseIf nChute > nNumero
                 nTentativas += 1  
-                MsgAlert("Você errou, na tentativa " +CvalToChar(nTentativas)+ " o  valor " + Cvaltochar(nChute)+ " é muito alto, tente novamente !") 
+                MsgAlert("Você errou, na " +CvalToChar(nTentativas)+ "º, o  valor " + Cvaltochar(nChute)+ " é muito alto, tente novamente !") 
                 nChute := 0
                 lNdig := .F.
           Else 
               nTentativas += 1 
-              MSgInfo("Parabéns, você acertou o número " + Cvaltochar(nNumero)+" !")
+              MSgInfo("Parabéns você acertou! O número randômico é: " + Cvaltochar(nNumero)+" !")
                  
               If nTentativas >= 2
-                MSgInfo("Total de tentativas foi de " + Cvaltochar(nTentativas)+" tentativas!")
+                MSgInfo("Total de tentativas: " + Cvaltochar(nTentativas))
               ELse 
                 MSgInfo("Ainda por cima você acertou na " + Cvaltochar(nTentativas)+"º tentativa!")
               EndIf
@@ -70,10 +70,10 @@ While nChute <> nNumero
                 nNumero := Randomize(1,50)
              EndIF
 
-            While lNdig == .F.
+            While !lNdig 
               nChute := Val(FwInputBox("Digite um número entre 1 e 50")) 
                 If nChute < 1 .OR. nChute > 50
-                   MSGAlert("Valor inválido, você deve digitar números entre 1 à 50.Por favor, digite corretamente desta vez!")
+                   MSGAlert("Valor inválido, o número deve estar entre 1 e 50 e você digitou "+CValtoChar(nChute)+" .Por favor, digite corretamente desta vez!")
                   nChute := 0
                 else
                   lNdig := .T.
@@ -83,20 +83,20 @@ While nChute <> nNumero
 
             If nChute > nNumero
               nTentativas += 1 
-              MsgAlert("Você errou na tentativa " +CvalToChar(nTentativas)+ " ,o valor " + Cvaltochar(nChute)+ " é muito alto, tente novamente !")
+              MsgAlert("Você errou na " +CvalToChar(nTentativas)+ "º tentativa, o valor " + Cvaltochar(nChute)+ " é muito alto, tente novamente !")
               nChute := 0
               lNdig := .F.  
             elseIf nChute < nNumero
                 nTentativas += 1  
-                MsgAlert("Você errou, na tentativa " +CvalToChar(nTentativas)+ " o  valor " + Cvaltochar(nChute)+ " é muito baixo, tente novamente !")
+                MsgAlert("Você errou, na " +CvalToChar(nTentativas)+ ",º tentativa, o  valor " + Cvaltochar(nChute)+ " é muito baixo, tente novamente !")
                 nChute := 0
                 lNdig := .F.                    
             Else 
               nTentativas += 1 
-              MSgInfo("Parabéns, você acertou o número " + Cvaltochar(nNumero)+" !")
+              MSgInfo("Parabéns você acertou! O número randômico é: " + Cvaltochar(nNumero)+" !")
                
                If nTentativas >= 2
-                 MSgInfo("Total de tentativas foi de " + Cvaltochar(nTentativas)+" tentativas!")
+                 MSgInfo("Total de tentativas: " + Cvaltochar(nTentativas)+" tentativas!")
                ELse 
                  MSgInfo("Ainda por cima acertou na " + Cvaltochar(nTentativas)+"º tentativa!")
                EndIf
@@ -111,10 +111,10 @@ While nChute <> nNumero
                nNumero := Randomize(1,100)
             EndIF
             
-            While lNdig == .F.
+            While !lNdig 
               nChute := Val(FwInputBox("Digite um número entre 1 e 100")) 
                 If nChute < 1 .OR. nChute > 100
-                   MSGAlert("Valor inválido, você deve digitar números entre 1 à 100 " +Cvaltochar(nChute)+ " .Por favor, digite corretamente desta vez!")
+                   MSGAlert("Valor inválido, o número deve estar entre 1 e 100 e você digitou " +Cvaltochar(nChute)+ " .Por favor, digite corretamente desta vez!")
                 else
                   lNdig := .T.
                 EndIf
@@ -122,22 +122,22 @@ While nChute <> nNumero
            
            If nChute > nNumero
               nTentativas += 1 
-              MsgAlert("Você errou na tentativa " +CvalToChar(nTentativas)+ " ,o valor " + Cvaltochar(nChute)+ " é muito alto, tente novamente !")
+              MsgAlert("Você errou na " +CvalToChar(nTentativas)+ "º tentativa, o valor " + Cvaltochar(nChute)+ " é muito alto, tente novamente !")
               nChute := 0
               lNdig := .F.
 
            elseIf nChute < nNumero
                 nTentativas += 1  
-                MsgAlert("Você errou, na tentativa " +CvalToChar(nTentativas)+ " o  valor " + Cvaltochar(nChute)+ " é muito baixo, tente novamente !")
+                MsgAlert("Você errou, na "+CvalToChar(nTentativas)+ "º, o  valor " + Cvaltochar(nChute)+ " é muito baixo, tente novamente !")
                 nChute := 0
                 lNdig := .F.
 
            Else 
               nTentativas += 1 
-              MSgInfo("Parabéns, você acertou o número " + Cvaltochar(nNumero)+" !")
+              MSgInfo("Parabéns você acertou! O número randômico é: " + Cvaltochar(nNumero))
                
               If nTentativas >= 2
-                MSgInfo("Total de tentativas foi de " + Cvaltochar(nTentativas)+" tentativas!")
+                MSgInfo("Total de tentativas:" + Cvaltochar(nTentativas)+" tentativas!")
               ELse 
                 MSgInfo("Ainda por cima acertou na " + Cvaltochar(nTentativas)+"º tentativa!")
               EndIf
