@@ -53,6 +53,42 @@ User Function ABRESZ1()
 	dbSelectArea(cString)
 	mBrowse( 6,1,22,75,cString,aCampos,cCampo)
 
+	RpcSetType(3)
+
+	PREPARE ENVIRONMENT EMPRESA "99" FILIAL "01" MODULO "FAT"
+
+    Ffilha()
+
+	RESET ENVIRONMENT
+Return
+
+//Função Filha para Explicar StatIc Function
+
+
+User Function Ffilha()
+
+Local aCampos := {}
+Local aTitulos := {}
+Local Nx := 0
+
+
+
+AADD(aCampoS,"C5_FILIAL")
+AADD(aCampoS,"C5_NUM")
+
+
+
+SX3->(DbSetOrder(2))
+For Nx:= 1 To Len(aCampos)
+Sx3->(DbSeek(aCampos,[nx]))
+AADD(aTitulos,Alltrim(SX3->X3_TITULO))
+Next nx
+
+//O trecho acima pode ser reescrito da forma abaixo e teremos os mesmo resultados 
+
+aTitulos := {}
+SX3->(DbGoTop())
+aEval(aCampos,{|X|SX3->(DbSeek(X)),AADD(aTitulos,Alltrim(SX3->X3_TITULO))})
 
 Return
 

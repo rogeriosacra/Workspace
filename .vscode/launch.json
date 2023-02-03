@@ -91,8 +91,11 @@
 		},
 		{
 			"label": "u_exbloco"
+		},
+		{
+			"label": "u_Blocos"
 		}
 	],
-	"lastProgramExecuted": "u_ADIVINHA",
+	"lastProgramExecuted": "u_Blocos",
 	"lastProgramArgumens": []
 }
