@@ -33,7 +33,9 @@ Local aCampos := {}
 Local aTitulos := {}
 Local Nx := 0
 
-Prepare Environment Empresa "99" Filial "01" Modulo "Fat"
+RpcSetType(3)
+
+PREPARE ENVIRONMENT EWMPRESA "99" FILIAL "01" MODULO "Fat"
 
 AADD(aCampoS,"C5_FILIAL")
 AADD(aCampoS,"C5_NUM")
@@ -52,7 +54,7 @@ aTitulos := {}
 SX3->(DbGoTop())
 aEval(aCampos,{|X|SX3->(DbSeek(X)),AADD(aTitulos,Alltrim(SX3->X3_TITULO))})
 
-Reset Environment
+RESET ENVIRONMENT
 
 
 Return
