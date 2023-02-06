@@ -100,8 +100,14 @@
 		},
 		{
 			"label": "u_ExPsPar"
+		},
+		{
+			"label": "u_EXPASPS"
+		},
+		{
+			"label": "u_EXPASPA"
 		}
 	],
-	"lastProgramExecuted": "u_ExPassagPara",
+	"lastProgramExecuted": "u_EXPASPA",
 	"lastProgramArgumens": []
 }
