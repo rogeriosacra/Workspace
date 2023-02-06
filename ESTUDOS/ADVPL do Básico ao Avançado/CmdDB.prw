@@ -22,10 +22,12 @@ User Function CmdDB()
 Local cCliente := "999999"
 Local cLoja := "01"
 
+
 RpcSetType(3)
 
 Prepare Environment  EMPRESA "99" FILIAL "01"  MODULO "FAT"
 
+SZ1->(GetArea())
 DbSelectArea("SZ1")
 DbSetOrder(1)
 
