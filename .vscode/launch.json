@@ -94,8 +94,14 @@
 		},
 		{
 			"label": "u_Blocos"
+		},
+		{
+			"label": "u_ExPassagPara"
+		},
+		{
+			"label": "u_ExPsPar"
 		}
 	],
-	"lastProgramExecuted": "u_Blocos",
+	"lastProgramExecuted": "u_ExPassagPara",
 	"lastProgramArgumens": []
 }

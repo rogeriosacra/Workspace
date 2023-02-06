@@ -10,10 +10,8 @@
     @param param_name, param_type, param_descr
     @return return_var, return_type, return_description
     @example
-    (examples)
-    @see (links_or_references)
-    /*/
-User Function ExPassagPara()
+       /*/
+User Function ExPasPa()
 
 Local := nQuantidade
 Local := nValor
@@ -22,7 +20,7 @@ RpcSetType(3)
 
 PREPARE ENVIRONMENT EMPRESA "99" FILIAL "01" MODULO "FAT"
 
-Filho(nQuantidade,nValor)
+Calc(nQuantidade,nValor)
 
 Alert(nResultado)
 
@@ -30,7 +28,8 @@ RESET ENVIRONMENT
     
 Return 
 
-User Function Filho(nQuantidade,nValor)
+
+User Function Calc(nQuantidade,nValor)
 
 Local nResultado := 0
 
