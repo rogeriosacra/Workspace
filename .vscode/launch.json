@@ -110,8 +110,11 @@
 		{
 			"args": [],
 			"label": "u_EXPASPA"
+		},
+		{
+			"label": "u_diretiva"
 		}
 	],
-	"lastProgramExecuted": "u_EXPASPA",
+	"lastProgramExecuted": "u_diretiva",
 	"lastProgramArgumens": []
 }
