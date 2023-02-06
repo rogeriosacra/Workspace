@@ -28,6 +28,7 @@ Prepare Environment  EMPRESA "99" FILIAL "01"  MODULO "FAT"
 
 DbSelectArea("SZ1")
 DbSetOrder(1)
+
 If DbSeek(xFilial()+cLoja+cCliente) 
     Alert("Achou")
     RecLock("SZ1",.F.)
