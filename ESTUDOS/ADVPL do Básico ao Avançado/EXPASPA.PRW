@@ -13,26 +13,25 @@
        /*/
 User Function ExPasPa()
 
-Local := nQuantidade
-Local := nValor
+Local nQuantidade1 := 100
+Local nValor1 := 100
+Local nresultado1 := 0
 
 RpcSetType(3)
 
-PREPARE ENVIRONMENT EMPRESA "99" FILIAL "01" MODULO "FAT"
 
-Calc(nQuantidade,nValor)
+nResultado1 := Calc(nQuantidade1,nValor1)
 
-Alert(nResultado)
+Alert(nResultado1)
 
-RESET ENVIRONMENT
     
 Return 
 
 
-User Function Calc(nQuantidade,nValor)
+Static Function Calc(nQuantidade1,nValor1)
 
 Local nResultado := 0
 
-nResultado := nQuantidade * nValor
+nResultado1 := nQuantidade1 * nValor1
 
 Return (nResultado)
