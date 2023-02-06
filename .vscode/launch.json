@@ -113,8 +113,15 @@
 		},
 		{
 			"label": "u_diretiva"
+		},
+		{
+			"label": "u_CmdDB"
+		},
+		{
+			"args": [],
+			"label": "u_CmdDB"
 		}
 	],
-	"lastProgramExecuted": "u_diretiva",
+	"lastProgramExecuted": "u_CmdDB",
 	"lastProgramArgumens": []
 }
