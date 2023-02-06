@@ -1,4 +1,9 @@
 #INCLUDE 'protheus.ch'
+#INCLUDE 'vkey.ch'
+#INCLUDE 'Rwmake.ch'
+#INCLUDE 'msmgadd.ch'
+#INCLUDE 'tbiconn.ch'
+#INCLUDE 'tbicode.ch'
 
 /*/{Protheus.doc} User Function CmdDB
 description)
@@ -19,7 +24,7 @@ Local cLoja := "01"
 
 RpcSetType(3)
 
-PREPARE ENVIRONMENT EMPRESA "99" FILIAL "01" MODULO "FAT"
+Prepare Environment  EMPRESA "99" FILIAL "01"  MODULO "FAT"
 
 DbSelectArea("SZ1")
 DbSetOrder(1)
@@ -50,8 +55,8 @@ If DbSeek(xFilial()+cLoja+cCliente)
     MSUNLOCK()
 else
     Alert("DBSEEK não localizou nada")
-EndIF      
+EndIF 
 
-RESET ENVIRONMENT
+Reset Environment
 
 Return 
