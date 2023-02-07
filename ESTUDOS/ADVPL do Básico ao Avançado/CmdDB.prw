@@ -21,10 +21,7 @@ User Function CmdDB()
 
 Local cCliente := "001"
 Local cLoja := "01"
-
-
 RpcSetType(3)
-
 Prepare Environment  EMPRESA "99" FILIAL "01"  MODULO "FAT"
 
 //SZ1->(GetArea())
@@ -37,7 +34,7 @@ If DbSeek(xFilial()+cCliente+cLoja)
     Z1_FATOR := 100
     MSUNLOCK()
 else
-    RecLock("SZ1",.F.)
+    RecLock("SZ1",.T.)
     Z1_FILIAL  := xFilial()
     Z1_CLIENTE := "002"
     Z1_LOJA    := "01"
