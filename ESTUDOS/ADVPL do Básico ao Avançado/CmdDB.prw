@@ -19,7 +19,7 @@ description)
     /*/
 User Function CmdDB()
 
-Local cCliente := "999999"
+Local cCliente := "001"
 Local cLoja := "01"
 
 
@@ -27,11 +27,11 @@ RpcSetType(3)
 
 Prepare Environment  EMPRESA "99" FILIAL "01"  MODULO "FAT"
 
-SZ1->(GetArea())
+//SZ1->(GetArea())
 DbSelectArea("SZ1")
 DbSetOrder(1)
 
-If DbSeek(xFilial()+cLoja+cCliente) 
+If DbSeek(xFilial()+cCliente+cLoja) 
     Alert("Achou")
     RecLock("SZ1",.F.)
     Z1_FATOR := 100
