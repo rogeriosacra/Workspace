@@ -33,7 +33,7 @@ DbSelectArea(cArea)
 DbSetOrder(1)// Opação ao dbsetorder: DBORDERNICKNAME("Z1CLIENTE") UTILIZA O NICKNAME DO INDICE
 DbGotop()
 
-Begin transaction
+
 If DbSeek(xFilial()+cCliente+cLoja) 
     MsgAlert("Cliente já cadastrado, apenas o fator será atualizado")
     RecLock("SZ1",.F.) 
