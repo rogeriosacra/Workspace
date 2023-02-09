@@ -17,7 +17,7 @@ description)
     (examples)
     @see (links_or_references)
     /*/
-User Function manipulcao()
+User Function manipulacao()
 
 Local cArea := "SZ1"
 Local cCliente := "000001"

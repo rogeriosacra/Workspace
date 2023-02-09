@@ -120,8 +120,11 @@
 		{
 			"args": [],
 			"label": "u_CmdDB"
+		},
+		{
+			"label": "u_manipulacao"
 		}
 	],
-	"lastProgramExecuted": "u_CmdDB",
+	"lastProgramExecuted": "u_manipulacao",
 	"lastProgramArgumens": []
 }
