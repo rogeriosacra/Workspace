@@ -7,7 +7,10 @@
 // -----------+-------------------+---------------------------------------------------------
 // 21/06/2019 | paulo.bindo       | Gerado com auxílio do Assistente de Código do TDS.
 // -----------+-------------------+---------------------------------------------------------
-
+#INCLUDE 'Protheus.ch'
+#INCLUDE 'TbiConn.ch'
+#INCLUDE 'TbiCode.ch'
+#INCLUDE 'Totvs.ch'
 #include "protheus.ch"
 #include "vkey.ch"
 #include "Rwmake.ch"
