@@ -123,8 +123,11 @@
 		},
 		{
 			"label": "u_manipulacao"
+		},
+		{
+			"label": "u_softl"
 		}
 	],
-	"lastProgramExecuted": "u_manipulacao",
+	"lastProgramExecuted": "u_softl",
 	"lastProgramArgumens": []
 }
