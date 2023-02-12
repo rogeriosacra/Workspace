@@ -34,8 +34,8 @@ Static Function MenuDef()
 Return aRotina
 
 Static Function ModelDef()
-	Local oModel := MPFormModel():New("XMVC003",{|oModel|MdlPreVld(oModel)},{|oModel| MdlPosVld(oModel)},,)
-	Local oStPai := FWFormStruct(1,"ZZB")
+	Local oModel   := MPFormModel():New("XMVC003",{|oModel|MdlPreVld(oModel)},{|oModel| MdlPosVld(oModel)},,)
+	Local oStPai   := FWFormStruct(1,"ZZB")
 	Local oStFilho := FWFormStruct(1,"ZZA")
 	
 	oModel:AddFields("ZZBMASTER",,oStPai)
