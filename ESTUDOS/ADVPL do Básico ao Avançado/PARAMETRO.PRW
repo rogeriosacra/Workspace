@@ -2,6 +2,8 @@
 #INCLUDE 'TbiConn.ch'
 #INCLUDE 'TbiCode.ch'
 #INCLUDE 'Totvs.ch'
+#INCLUDE 'parmtype.ch'
+
 
 
 /*/{Protheus.doc} User Function PARAMETRO
@@ -13,11 +15,7 @@
     /*/
 User Function PARAMETRO()
 
-  Local dParam :=  ""
-
-
-
-
+  Local dParam 
 
 
   PREPARE ENVIRONMENT EMPRESA "99" FILIAL "01" MODULO "FAT"
@@ -29,7 +27,7 @@ User Function PARAMETRO()
 
   dParam := GetMV("MV_ULMES")
 
-  MsgInfo(dParam)       
+  MsgInfo(DtoC(dParam))       
 
   RESET ENVIRONMENT
 

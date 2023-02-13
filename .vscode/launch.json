@@ -126,8 +126,11 @@
 		},
 		{
 			"label": "u_softl"
+		},
+		{
+			"label": "u_PARAMETRO"
 		}
 	],
-	"lastProgramExecuted": "SIGAMDI",
+	"lastProgramExecuted": "u_PARAMETRO",
 	"lastProgramArgumens": []
 }
