@@ -27,7 +27,9 @@ User Function PARAMETRO()
 
   dParam := GetMV("MV_ULMES")
 
-  MsgInfo(DtoC(dParam))       
+  MsgInfo(DtoC(GetMV("MV_ULMES"))) 
+ 
+  // MsgInfo(DtoC(dParam))      
 
   RESET ENVIRONMENT
 
