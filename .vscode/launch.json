@@ -132,8 +132,11 @@
 		},
 		{
 			"label": "u_transacao"
+		},
+		{
+			"label": "SIGAATF"
 		}
 	],
-	"lastProgramExecuted": "u_transacao",
+	"lastProgramExecuted": "SIGAATF",
 	"lastProgramArgumens": []
 }
