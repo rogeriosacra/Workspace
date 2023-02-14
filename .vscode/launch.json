@@ -129,8 +129,11 @@
 		},
 		{
 			"label": "u_PARAMETRO"
+		},
+		{
+			"label": "u_transacao"
 		}
 	],
-	"lastProgramExecuted": "u_PARAMETRO",
+	"lastProgramExecuted": "u_transacao",
 	"lastProgramArgumens": []
 }
