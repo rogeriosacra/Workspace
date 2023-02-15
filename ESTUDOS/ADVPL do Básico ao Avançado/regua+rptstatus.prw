@@ -34,10 +34,10 @@ Return
 //******************************************************************
 
 Static Function RunProc(lEnd)
-	Local nCnt := 0
+	Local nCnt := nIcr := 0
     Local cCancel := "Cancelado pelo usuario"
 
-
+// este trecho diz respeito a contagem dos registros que será armazenada em nCnt, para em seguida setar o tamanho da regua, na linha 49 
 	dbSelectArea("SX5")
 	dbSetOrder(1)
 	dbSeek(xFilial("SX5")+"01",.T.)
@@ -47,14 +47,17 @@ Static Function RunProc(lEnd)
 	End
 
 SetRegua(nCnt)
-
+//Este trecho diz respeito ao incremento da regua conforme é lido cada registro
 	dbSeek(xFilial("SX5")+"01",.T.)
 	While !Eof() .And. X5_FILIAL == xFilial("SX5") .And. X5_TABELA <= "99"
 		IncRegua()
+		nIcr++
 		If lEnd
 			MsgInfo(cCancel,"Fim")
 			Exit
 		Endif
 		dbSkip()
 	End
+
+	Alert(nIcr) //Usei esta variáve somente para verificar se o numero de incrmento era igual o numero de registro.Confirmado.
 Return
