@@ -135,9 +135,11 @@
 		},
 		{
 			"label": "SIGAATF"
+		},
+		{
+			"label": "u_IVisual"
 		}
 	],
-	"lastProgramExecuted": "<cancel>",
-	"lastProgramArgumens": [],
-	"lastProgramArguments": []
+	"lastProgramExecuted": "u_IVisual",
+	"lastProgramArgumens": []
 }
