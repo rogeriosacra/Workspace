@@ -43,7 +43,7 @@ User Function xParamBox()
 //           [7]-Flag .T./.F. Parametro Obrigatorio ?
 // Cuidado, há um problema nesta opção quando selecionado a 1ª opção.
 
-	aAdd(aParamBox,{3,"Mostra deletados",1,{"Sim","Não"},50,"",.F.})
+	aAdd(aParamBox,{3,"Mostra deletados",1,{"Sim","Não","Talvez"},50,"",.F.})
 // Tipo 3 -> Radio
 //           [2]-Descricao
 //           [3]-Numerico contendo a opcao inicial do Radio

@@ -138,8 +138,11 @@
 		},
 		{
 			"label": "u_IVisual"
+		},
+		{
+			"label": "u_xParamBox"
 		}
 	],
-	"lastProgramExecuted": "u_IVisual",
+	"lastProgramExecuted": "SIGAATF",
 	"lastProgramArgumens": []
 }
