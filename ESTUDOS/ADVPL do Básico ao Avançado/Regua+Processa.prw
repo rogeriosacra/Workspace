@@ -46,7 +46,7 @@ Static Function RunProc(lEnd)
 
 	dbSeek(xFilial("SX5")+"01",.T.)
 	While !Eof() .And. X5_FILIAL == xFilial("SX5") .And. X5_TABELA <= "99"
-		IncProc("Processando tabela: "+SX5->X5_CHAVE)
+		IncProc("Processando tabela: "+SX5->X5_CHAVE) 
 		If lEnd
 			MsgInfo(cCancel,"Fim")
 			Exit
