@@ -13,9 +13,9 @@ User Function PBProc()
 	Local aSay := {}
 	Local aButton := {}
 	Local nOpc := 0
-	Local cTitulo := "Exemplo de Funções"
-	Local cDesc1 :="Utilização da função Processa()"
-	Local cDesc2 := " em conjunto com as funções de incremento ProcRegua() e"
+	Local cTitulo := "Exemplo de Fun��es"
+	Local cDesc1 :="Utilizacao funcao Processa()"
+	Local cDesc2 := " em conjunto com as fun��es de incremento ProcRegua() e"
 	Local cDesc3 := " IncProc()"
 	
 
