@@ -25,7 +25,7 @@ Local nOPca   := 0
     DEFINE MSDIALOG oDlg TITLE cTitulo FROM 000,000 to 080,300 PIXEL
     @ 001,001 SAY cTexto SIZE 55,07 OF oDlg PIXEL
    // @ 010,010 MSGET cCGC SIZE 55,11 OF oDlg PIXEL PICTURE "@R 99.999.999/9999-99" VALID !VAZIO() // Valid-> método para validação de conteúdo de campo, usando a função !vazio()
-    @ 010,010 MSGET cCGC SIZE 55,11 OF oDlg PIXEL PICTURE "@R 99.999.999/9999-99" VALID ACGC()
+    @ 010,010 MSGET cCGC SIZE 55,11 OF oDlg PIXEL PICTURE "@R 99.999.999/9999-99" VALID ACGC() // Esta linha faz a mesma coisa que ainha comentada acima, apenas tem validação diferente
     DEFINE SBUTTON FROM 010,120 TYPE 1 ACtION(nOpca := 1,oDlg:End()) ENABLE OF oDLG /// nopca := 1 se clicar no botão ok
     DEFINE SBUTTON FROM 020,120 TYPE 2 ACtION(nOpca := 2,oDlg:End()) ENABLE OF oDLG // nopca := 2 se clicar no botão cancelar
     ACTIVATE MSDIALOG oDlg CENTERED
