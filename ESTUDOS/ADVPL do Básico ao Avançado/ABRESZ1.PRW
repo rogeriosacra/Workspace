@@ -56,19 +56,19 @@ User Function ABRESZ1()
 	dbSelectArea(cString)
 	mBrowse( 6,1,22,75,cString,aCampos,cCampo)
 
-	RpcSetType(3)
+	/*RpcSetType(3)
 
 	PREPARE ENVIRONMENT EMPRESA "99" FILIAL "01" MODULO "FAT"
 
     Ffilha()
 
-	RESET ENVIRONMENT
+	RESET ENVIRONMENT*/
 Return
 
 //Função Filha para Explicar StatIc Function
 
 
-User Function Ffilha()
+/*User Function Ffilha()
 
 Local aCampos := {}
 Local aTitulos := {}
@@ -77,7 +77,7 @@ Local Nx := 0
 
 
 AADD(aCampoS,"C5_FILIAL")
-AADD(aCampoS,"C5_NUM")
+AADD(aCampoS,"C5_NUM") */
 
 
 
