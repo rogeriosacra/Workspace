@@ -81,7 +81,7 @@ AADD(aCampoS,"C5_NUM") */
 
 
 
-SX3->(DbSetOrder(2))
+/*SX3->(DbSetOrder(2))
 For Nx:= 1 To Len(aCampos)
 Sx3->(DbSeek(aCampos,[nx]))
 AADD(aTitulos,Alltrim(SX3->X3_TITULO))
