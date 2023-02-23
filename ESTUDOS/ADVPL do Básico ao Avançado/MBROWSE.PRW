@@ -15,14 +15,14 @@
 ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
 /*/
 
-User Function MBrZ1()
-	Local cAlias := "SZ1"
+User Function MBrZ12()
+	Local cAlias := "SA3"
 	Local aCores := {}
 	Local cFiltra := ""
 
-	Private cCadastro := "Cadastro de UM por Cliente"
+	Private cCadastro := "Cadastro Vendedores"
 	Private aRotina := {}
-	Private aIndexSZ1 := {}
+	Private aIndexSA3 := {}
 	Private bFiltraBrw:={||}
 
 //BOTOES MENU
@@ -31,12 +31,12 @@ User Function MBrZ1()
 	AADD(aRotina,{"Incluir" ,"U_Inclui" ,0,3})		//AADD(aRotina,{"Incluir" ,"AxInclui",0,3})
 	AADD(aRotina,{"Alterar" ,"U_Altera" ,0,4})  	//AADD(aRotina,{"Alterar" ,"AxAltera" ,0,4})
 	AADD(aRotina,{"Excluir" ,"U_Deleta" ,0,5})		//AADD(aRotina,{"Excluir" ,"AxDeleta",0,5})
-	AADD(aRotina,{"Legenda" ,"U_Legenda" ,0,3})
+	AADD(aRotina,{"Legenda" ,"U_Lgenda" ,0,3})
 	AADD(aRotina,{"Processa" ,"U_PBMsgRun()" ,0,6})
 //CORES LEGENDA
-	AADD(aCores,{"Z1_TIPO == 'M'" ,"BR_VERDE" })
-	AADD(aCores,{"Z1_TIPO == 'D'" ,"BR_AMARELO" })
-	AADD(aCores,{"Z1_TIPO == 'S'" ,"BR_VERMELHO" })
+	AADD(aCores,{"A3_MUN == 'DIADEMA'" ,"BR_VERDE" })
+	AADD(aCores,{"A3_MUN == 'SÃO PAULO'" ,"BR_AMARELO" })
+    AADD(aCores,{"A3_MUN == 'GUARULHOS'" ,"BR_VERMELHO" })
 
 	dbSelectArea(cAlias)
 	dbSetOrder(1)
@@ -44,8 +44,8 @@ User Function MBrZ1()
 //| Cria o filtro na MBrowse utilizando a função FilBrowse
 //+------------------------------------------------------------
 
-	cFiltra	:= ' SZ1->Z1_FATOR > 10 '
-	bFiltraBrw 	:={ || FilBrowse(cAlias,@aIndexSZ1,@cFiltra) }
+	cFiltra	:= 'SA3->A3_MUN <> "GUARULHOS"'
+	bFiltraBrw 	:={ || FilBrowse(cAlias,@aIndexSA3,@cFiltra) }
 	Eval(bFiltraBrw)
 	dbSelectArea(cAlias)
 	dbGoTop()
@@ -53,7 +53,7 @@ User Function MBrZ1()
 //+------------------------------------------------
 //| Deleta o filtro utilizado na função FilBrowse
 //+------------------------------------------------
-	EndFilBrw(cAlias,aIndexSZ1)
+	EndFilBrw(cAlias,aIndexSA3)
 Return Nil
 
 /*/
@@ -71,7 +71,7 @@ Return Nil
 	ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
 /*/
 
-User Function Inclui(cAlias,nReg,nOpc)
+User Function IncluiR(cAlias,nReg,nOpc)
 	Local nOpcao := 0
 
 	nOpcao := AxInclui(cAlias,nReg,nOpc)
@@ -98,7 +98,7 @@ Return Nil
 	±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
 	ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
 /*/
-User Function Altera(cAlias,nReg,nOpc)
+User Function Alterar(cAlias,nReg,nOpc)
 	Local nOpcao := 0
 	nOpcao := AxAltera(cAlias,nReg,nOpc)
 	If nOpcao == 1
@@ -122,7 +122,7 @@ Return Nil
 	±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
 	ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
 /*/
-User Function Deleta(cAlias,nReg,nOpc)
+User Function Deletar(cAlias,nReg,nOpc)
 	Local nOpcao := 0
 	nOpcao := AxDeleta(cAlias,nReg,nOpc)
 	If nOpcao == 1
@@ -147,11 +147,11 @@ Return Nil
 	ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
 /*/
 
-User Function Legenda()
+User Function Lgenda()
 	Local ALegenda := {}
 
-	AADD(aLegenda,{"BR_VERDE" ,"Multiplica" })
-	AADD(aLegenda,{"BR_AMARELO" ,"Divide" })
-	AADD(aLegenda,{"BR_VERMELHO" ,"Subtrai" })
-	BrwLegenda(cCadastro, "Legenda", aLegenda)
+	AADD(aLegenda,{"BR_VERDE" ,"Diadema" })
+	AADD(aLegenda,{"BR_AMARELO" ,"São Paulo" })
+    AADD(aLegenda,{"BR_VERMELHO", "Guarulhos" })
+	BrwLegenda(cCadastro,"Legenda", aLegenda)
 Return Nil
