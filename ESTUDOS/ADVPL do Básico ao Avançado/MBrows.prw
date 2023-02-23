@@ -15,14 +15,14 @@
 ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
 /*/
 
-User Function MBrwSZ1()
+User Function MBrZ1()
 	Local cAlias := "SZ1"
 	Local aCores := {}
 	Local cFiltra := ""
 
 	Private cCadastro := "Cadastro de UM por Cliente"
 	Private aRotina := {}
-	Private aIndexZ1 := {}
+	Private aIndexSZ1 := {}
 	Private bFiltraBrw:={||}
 
 //BOTOES MENU
@@ -70,7 +70,7 @@ Return Nil
 	ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
 /*/
 
-User Function BInclui(cAlias,nReg,nOpc)
+User Function Inclui(cAlias,nReg,nOpc)
 	Local nOpcao := 0
 
 	nOpcao := AxInclui(cAlias,nReg,nOpc)
@@ -97,7 +97,7 @@ Return Nil
 	±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
 	ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
 /*/
-User Function BAltera(cAlias,nReg,nOpc)
+User Function Altera(cAlias,nReg,nOpc)
 	Local nOpcao := 0
 	nOpcao := AxAltera(cAlias,nReg,nOpc)
 	If nOpcao == 1
@@ -121,7 +121,7 @@ Return Nil
 	±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
 	ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
 /*/
-User Function BDeleta(cAlias,nReg,nOpc)
+User Function Deleta(cAlias,nReg,nOpc)
 	Local nOpcao := 0
 	nOpcao := AxDeleta(cAlias,nReg,nOpc)
 	If nOpcao == 1
@@ -146,7 +146,7 @@ Return Nil
 	ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
 /*/
 
-User Function BLegenda()
+User Function Legenda()
 	Local ALegenda := {}
 
 	AADD(aLegenda,{"BR_VERDE" ,"Multiplica" })
