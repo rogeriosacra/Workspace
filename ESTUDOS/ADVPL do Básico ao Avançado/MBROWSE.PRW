@@ -33,10 +33,11 @@ User Function MBrZ12()
 	AADD(aRotina,{"Excluir" ,"U_Deleta" ,0,5})		//AADD(aRotina,{"Excluir" ,"AxDeleta",0,5})
 	AADD(aRotina,{"Legenda" ,"U_Lgenda" ,0,3})
 	AADD(aRotina,{"Processa" ,"U_PBMsgRun()" ,0,6})
-//CORES LEGENDA
-	AADD(aCores,{"A3_MUN == 'DIADEMA'" ,"BR_VERDE" })
-	AADD(aCores,{"A3_MUN == 'SÃO PAULO'" ,"BR_AMARELO" })
-    AADD(aCores,{"A3_MUN == 'GUARULHOS'" ,"BR_VERMELHO" })
+//CORES LEGENDA 
+	AADD(aCores,{"A3_EST == 'SP'"   ,"BR_VERDE" })
+	AADD(aCores,{"A3_EST == 'MG'" ,"BR_AMARELO" })
+    AADD(aCores,{"A3_EST == 'RJ'" ,"BR_VERMELHO" })
+    
 
 	dbSelectArea(cAlias)
 	dbSetOrder(1)
@@ -44,7 +45,7 @@ User Function MBrZ12()
 //| Cria o filtro na MBrowse utilizando a função FilBrowse
 //+------------------------------------------------------------
 
-	cFiltra	:= 'SA3->A3_MUN <> "GUARULHOS"'
+	cFiltra	:= ' SA3->A3_MUN <> "GUARULHOS" '
 	bFiltraBrw 	:={ || FilBrowse(cAlias,@aIndexSA3,@cFiltra) }
 	Eval(bFiltraBrw)
 	dbSelectArea(cAlias)
@@ -150,8 +151,8 @@ Return Nil
 User Function Lgenda()
 	Local ALegenda := {}
 
-	AADD(aLegenda,{"BR_VERDE" ,"Diadema" })
-	AADD(aLegenda,{"BR_AMARELO" ,"São Paulo" })
-    AADD(aLegenda,{"BR_VERMELHO", "Guarulhos" })
-	BrwLegenda(cCadastro,"Legenda", aLegenda)
+	AADD(aLegenda,{"BR_VERDE" ,"São Paulo" })
+	AADD(aLegenda,{"BR_AMARELO" ,"Minas Gerais" })
+    AADD(aLegenda,{"BR_VERMELHO" ,"Rio de Janeiro" })
+    BrwLegenda(cCadastro,"Legenda", aLegenda)
 Return Nil

@@ -31,8 +31,10 @@ User Function MBrZ1()
 	AADD(aRotina,{"Incluir" ,"U_Inclui" ,0,3})		//AADD(aRotina,{"Incluir" ,"AxInclui",0,3})
 	AADD(aRotina,{"Alterar" ,"U_Altera" ,0,4})  	//AADD(aRotina,{"Alterar" ,"AxAltera" ,0,4})
 	AADD(aRotina,{"Excluir" ,"U_Deleta" ,0,5})		//AADD(aRotina,{"Excluir" ,"AxDeleta",0,5})
-	AADD(aRotina,{"Legenda" ,"U_Legenda" ,0,3})
-	AADD(aRotina,{"Processa" ,"U_PBMsgRun()" ,0,6})
+	//AADD(aRotina,{"Legenda" ,"U_Legenda" ,0,3}) Exclui o botão de legenda do usuário
+	If Retcodusr() # "000000" // Condição para ter acesso ao botão da função de regua PbMsgRUN
+		AADD(aRotina,{"Processa" ,"U_PBMsgRun()" ,0,6})
+	EndIf
 //CORES LEGENDA
 	AADD(aCores,{"Z1_TIPO == 'M'" ,"BR_VERDE" })
 	AADD(aCores,{"Z1_TIPO == 'D'" ,"BR_AMARELO" })
