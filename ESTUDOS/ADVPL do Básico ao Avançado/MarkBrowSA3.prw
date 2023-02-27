@@ -20,7 +20,7 @@ USER FUNCTION MkBrwSA3()
 	Local nI := 0
 	Local cAlias := "SA3"
 	Private aRotina := {}
-	Private cCadastro := "Cadastro vendedores"
+	Private cCadastro := "Cadastro Vendedores"
 	Private aRecSel := {}
 
     //BOTOES
@@ -43,7 +43,7 @@ USER FUNCTION MkBrwSA3()
 
 	DbSelectArea(cAlias)
 	DbSetOrder(1)
-	MarkBrow(cAlias,aCpos[1],"A3_EMAIL == ' '",aCampos,.F.,		GetMark(,"SA3","A3__OK"))
+	MarkBrow(cAlias,aCpos[1],"A3_TIPVEND = '2'",aCampos,.F.,		GetMark(,"SA3","A3__OK"))
 Return Nil
 
 /*/
