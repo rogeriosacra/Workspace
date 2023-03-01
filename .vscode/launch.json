@@ -141,8 +141,29 @@
 		},
 		{
 			"label": "u_xParamBox"
+		},
+		{
+			"args": [],
+			"label": "U_AQuery"
+		},
+		{
+			"label": "U_AQuery"
+		},
+		{
+			"args": [],
+			"label": "AQuery"
+		},
+		{
+			"label": "U_ABRESZ1"
+		},
+		{
+			"args": [],
+			"label": "U_ABRESZ1"
+		},
+		{
+			"label": "SIGAADV"
 		}
 	],
-	"lastProgramExecuted": "SIGAATF",
+	"lastProgramExecuted": "U_ABRESZ1",
 	"lastProgramArgumens": []
 }
