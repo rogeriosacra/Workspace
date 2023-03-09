@@ -28,6 +28,7 @@ user Function MPSmybind()
 	cAlias  := MPSysOpenQuery(cQuery,,,,aBindParam)
 	aStruQry	:= &(cAlias)->(dbStruct())
 	Conout((cAlias)->(B1_COD))
+	MsgAlert(aStruQry[1][1])
 	(cAlias)->(DbCloseArea())
 	RpcClearEnv()
 Return
