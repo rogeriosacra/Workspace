@@ -76,7 +76,7 @@ User Function testatop()
 
 // Abre conexão com o ambiente de Testes
 	nCon2 := TCLink("MSSQL/TESTES")
-	if nCon2 < 0 then
+	if nCon2 < 0 
 		Alert("falha conectando ambiente de Testes")
 		QUIT
 	endif
