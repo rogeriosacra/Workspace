@@ -33,7 +33,7 @@ Static Function MenuDef()
 
 	ADD OPTION aRotina Title 'Pesquisar'   Action 'PesqBrw'             OPERATION 1 ACCESS 0
 	ADD OPTION aRotina Title 'Visualizar'  Action 'VIEWDEF.MOD3_MVC' OPERATION 2 ACCESS 0
-//	ADD OPTION aRotina Title 'Incluir'     Action 'VIEWDEF.MOD3_MVC' OPERATION 3 ACCESS 0
+	ADD OPTION aRotina Title 'Incluir'     Action 'VIEWDEF.MOD3_MVC' OPERATION 3 ACCESS 0
 	ADD OPTION aRotina Title 'Alterar'     Action 'VIEWDEF.MOD3_MVC' OPERATION 4 ACCESS 0
 //	ADD OPTION aRotina Title 'Excluir'     Action 'VIEWDEF.MOD3_MVC' OPERATION 5 ACCESS 0
 //	ADD OPTION aRotina Title 'Imprimir'    Action 'VIEWDEF.MOD3_MVC' OPERATION 8 ACCESS 0
