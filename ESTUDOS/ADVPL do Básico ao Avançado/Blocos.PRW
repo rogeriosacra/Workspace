@@ -1,4 +1,8 @@
 #Include 'Protheus.ch'
+#include "rwmake.ch"
+#include "TbiConn.ch"
+#include "TbiCode.ch"
+
 
 User Function Blocos()
 
@@ -35,7 +39,7 @@ Local Nx := 0
 
 RpcSetType(3)
 
-PREPARE ENVIRONMENT EWMPRESA "99" FILIAL "01" MODULO "Fat"
+PREPARE ENVIRONMENT EMPRESA "99" FILIAL "01" MODULO "Fat"
 
 AADD(aCampoS,"C5_FILIAL")
 AADD(aCampoS,"C5_NUM")
