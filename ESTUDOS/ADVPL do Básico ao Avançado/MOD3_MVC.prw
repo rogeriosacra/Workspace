@@ -31,7 +31,7 @@ montagem menu
 Static Function MenuDef()
 	Local aRotina := {}
 
-	ADD OPTION aRotina Title 'Pesquisar'   Action 'PesqBrw'             OPERATION 1 ACCESS 0
+	ADD OPTION aRotina Title 'Pesquisar'   Action 'PesqBrw'          OPERATION 1 ACCESS 0
 	ADD OPTION aRotina Title 'Visualizar'  Action 'VIEWDEF.MOD3_MVC' OPERATION 2 ACCESS 0
 	ADD OPTION aRotina Title 'Incluir'     Action 'VIEWDEF.MOD3_MVC' OPERATION 3 ACCESS 0
 	ADD OPTION aRotina Title 'Alterar'     Action 'VIEWDEF.MOD3_MVC' OPERATION 4 ACCESS 0
@@ -67,7 +67,7 @@ Static Function ModelDef()
 
 // Adiciona ao modelo uma estrutura de formulário de edição por grid
 //oModel:AddGrid( 'FILHO', 'PAI', oStruSZ1, /*bLinePre*/, /*bLinePost*/, /*bPreVal*/, /*bPosVal*/, /*BLoad*/ )
-oModel:AddGrid(  'FILHO', 'PAI', oStruSZ1, /*bLinePre*/,  { | oMdlG | MOD3LPOS( oMdlG ) } , /*bPreVal*/, /*bPosVal*/ )
+    oModel:AddGrid(  'FILHO', 'PAI', oStruSZ1, /*bLinePre*/,  { | oMdlG | MOD3LPOS( oMdlG ) } , /*bPreVal*/, /*bPosVal*/ )
 
 // Faz relaciomaneto entre os compomentes do model
 	oModel:SetRelation( 'FILHO', { { 'Z1_PRODUT', 'B1_COD' }}, SZ1->( IndexKey( 1 ) ) )
