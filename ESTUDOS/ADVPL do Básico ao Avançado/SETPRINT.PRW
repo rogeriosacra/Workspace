@@ -20,7 +20,7 @@
 
 User Function CORL001()
 
-SetPrvt("WNREL,CDESC1,CDESC2,CDESC3,AORD,TITULO")
+SetPrvt("WNREL,CDESC1,CDESC2,CDESC3,AORD,TITULO")// declaração de variáveis privates	
 SetPrvt("CPERG,CSTRING,ARETURN,NOMEPROG,NLASTKEY,ALINHA")
 SetPrvt("LIMITE,TAMANHO,LEND,IMPRIME,CBTXT,NQUEBRA")
 SetPrvt("CCABQUEBRA,CQUEBRANT,NQUANT_A_REC,NQUANT_T_REC,CBCONT,LI")
@@ -53,16 +53,16 @@ cDesc1   := "Emissao da Relacao de  Pedidos de Compras."
 cDesc2   := "Sera solicitado em qual Ordem, qual o Intervalo para"
 cDesc3   := "a emissao dos pedidos de compras."
 
-aOrd     := { " Por Numero         "," Por Produto        "," Por Fornecedor   "}
+aOrd     := { " Por Numero         "," Por Produto        "," Por Fornecedor   "}// tipo de ordenamento
 
 titulo   := "Relacao de Pedidos de Compras"
-cPerg    := "MTR120"
-cString  := "SC7"
-aReturn  := { "Zebrado", 1,"Compras", 1, 2, 1, "",1 }
+cPerg    := "MTR120"// pergunta sx1
+cString  := "SC7"// tabela a ser utilizada
+aReturn  := { "Zebrado", 1,"Compras", 1, 2, 1, "",1 }// se refere a como será a forma do relatório
 nomeprog := "CORL001"
-nLastKey := 0
+nLastKey := 0 // utilizada para tecla esc
 aLinha   :={ }
-LIMITE   :=220
+LIMITE   :=220 // numero de linha do relatório
 tamanho  :="G"
 lEnd     := .F.
 
@@ -76,7 +76,7 @@ Imprime  := .T.
 //³ Verifica as perguntas selecionadas                           ³
 //ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
 
-Pergunte("MTR120",.F.)
+Pergunte("MTR120",.F.) // executa pergunta na tela
 
 //ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
 //³ Variaveis utilizadas para parametros                         ³
@@ -98,13 +98,13 @@ Pergunte("MTR120",.F.)
 //ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
 //³ Envia controle para a funcao SETPRINT                        ³
 //ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
-wnrel := SetPrint(cString,wnrel,cPerg,titulo,cDesc1,cDesc2,cDesc3,.F.,aOrd,.f.,Tamanho)
+wnrel := SetPrint(cString,wnrel,cPerg,titulo,cDesc1,cDesc2,cDesc3,.F.,aOrd,.f.,Tamanho)// São os comandos do relatório
 
 If Lastkey()==27 .or. nlastkey==27
 	Return(Nil)
 EndIF
 
-SetDefault(aReturn,cString)
+SetDefault(aReturn,cString) //Prepara o ambiente de impressão de acordo com os dados do aReturn consultar TDN
 
 If LastKey() == 27 .OR. nLastKey == 27
 	
@@ -112,7 +112,7 @@ If LastKey() == 27 .OR. nLastKey == 27
 Endif
 
 
-RptStatus({||M120IP()})
+RptStatus({||M120IP()}) // Monta a Régua
 
 
 /*/
