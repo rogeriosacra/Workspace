@@ -25,8 +25,8 @@ User Function RELEXCEL()
 	EndIf
 */
 
-	Aadd(aParamBox,{1,"Produto De"   ,SPACE(9),PesqPict("SB1","B1_COD")    ,"" ,"SB1"	, "", 50, .F.})
-	Aadd(aParamBox,{1,"Produto Ate"  ,SPACE(9),PesqPict("SB1","B1_COD")    ,"" ,"SB1"	, "", 50, .F.})
+	Aadd(aParamBox,{1,"Produto De"   ,SPACE(15),PesqPict("SB1","B1_COD")    ,"" ,"SB1"	, "", 50, .F.})
+	Aadd(aParamBox,{1,"Produto Ate"  ,SPACE(15),PesqPict("SB1","B1_COD")    ,"" ,"SB1"	, "", 50, .F.})
 
 	//Aadd(aParamBox,{1,"Dt.Limite De" ,dtDe    ,PesqPict("SC1","C1_DTVALID"),"" ,""	   , "", 50, .F.}) 
 
