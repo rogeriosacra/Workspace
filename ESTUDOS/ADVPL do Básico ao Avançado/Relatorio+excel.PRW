@@ -25,12 +25,12 @@ User Function RELEXCEL()
 	EndIf
 */
 
-	Aadd(aParamBox,{1,"Produto De"   ,SPACE(15),PesqPict("SB1","B1_COD")    ,"" ,"SB1"	, "", 50, .F.})
-	Aadd(aParamBox,{1,"Produto Ate"  ,SPACE(15),PesqPict("SB1","B1_COD")    ,"" ,"SB1"	, "", 50, .F.})
+	Aadd(aParamBox,{1,"Produto De"   ,SPACE(20),PesqPict("SB1","B1_COD")    ,"" ,"SB1"	, "", 50, .F.}) //"SB1"--> Consulta F3
+	Aadd(aParamBox,{1,"Produto Ate"  ,SPACE(20),PesqPict("SB1","B1_COD")    ,"" ,"SB1"	, "", 50, .F.})
 
 	//Aadd(aParamBox,{1,"Dt.Limite De" ,dtDe    ,PesqPict("SC1","C1_DTVALID"),"" ,""	   , "", 50, .F.}) 
 
-	If ParamBox(aParamBox,"Informe Parametro",@aRet)
+	If ParamBox(aParamBox,"Informe Parametro",@aRet) // @Ret passada por parâmetro, pois a variável sofrerá mudança de valor pela função Parambox()
 		cProdDe     := aRet[1]
 		cProdAte    := aRet[2]
 	else
@@ -67,7 +67,7 @@ Static Function RELEX1(cProdDe,cProdAte)
 
 
 
-	cQuery := " SELECT B1_COD, B1_DESC, B1_TIPO, B1_UM, B1_RASTRO
+	cQuery := " SELECT B1_COD, B1_DESC, B1_TIPO, B1_UM, B1_RASTRO"
 	cQuery += " FROM "+RetSqlName("SB1")+" SB1"
 	cQuery += " WHERE
 	cQuery += " D_E_L_E_T_ <> '*'
