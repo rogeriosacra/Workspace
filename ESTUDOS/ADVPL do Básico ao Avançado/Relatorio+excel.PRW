@@ -61,7 +61,7 @@ Return
 
 Static Function RELEX1(cProdDe,cProdAte)
 	Private cArqTxt := "C:\EXCEL\RELEXCELI.CSV"// Arquivo que será criado
-	Private nHdl    := fCreate(cArqTxt)
+	Private nHdl    := fCreate(cArqTxt)// Cria arquivo texto
 	Private cEOL    := "CHR(13)+CHR(10)"// Equivale ao enter para pular linha
 	MakeDir("C:\EXCEL\")//Cria diretório caso no exista
 
@@ -74,12 +74,12 @@ Static Function RELEX1(cProdDe,cProdAte)
 	cQuery += " AND B1_COD BETWEEN '"+cProdDe+"' AND '"+cProdAte+"'"
 	cQuery += " ORDER BY B1_COD"
 
-	MEMOWRITE("QUERY\RELEXCEL.SQL", cQuery )// Grava query num q
+	MEMOWRITE("C:\QUERY\RELEXCEL.SQL", cQuery )// Grava query num arquivo .sql
 
 	dbUseArea(.T., "TOPCONN", TCGenQry(,,cQuery), 'QUERY', .F., .T.)
-	Count To nRec
+	Count To nRec // Conta número de registro da tabela temporária e atribui a nRec
 
-	ProcRegua(nRec)
+	ProcRegua(nRec) // Régua de processamento sobre nRec
 
 	If nRec == 0
 		MsgStop("Não foram encontrados dados!","Atenção - RELEXCEL")
