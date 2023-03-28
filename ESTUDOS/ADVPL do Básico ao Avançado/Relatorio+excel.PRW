@@ -60,10 +60,10 @@ Return
 */
 
 Static Function RELEX1(cProdDe,cProdAte)
-	Private cArqTxt := "C:\EXCEL\RELEXCELI.CSV"
+	Private cArqTxt := "C:\EXCEL\RELEXCELI.CSV"// Arquivo que será criado
 	Private nHdl    := fCreate(cArqTxt)
-	Private cEOL    := "CHR(13)+CHR(10)"
-	MakeDir("C:\EXCEL\")//Cria diretório caso não exista
+	Private cEOL    := "CHR(13)+CHR(10)"// Equivale ao enter para pular linha
+	MakeDir("C:\EXCEL\")//Cria diretório caso no exista
 
 
 
@@ -74,7 +74,7 @@ Static Function RELEX1(cProdDe,cProdAte)
 	cQuery += " AND B1_COD BETWEEN '"+cProdDe+"' AND '"+cProdAte+"'"
 	cQuery += " ORDER BY B1_COD"
 
-	MEMOWRIT("QUERY\RELEXCEL.SQL", cQuery )
+	MEMOWRITE("QUERY\RELEXCEL.SQL", cQuery )// Grava query num q
 
 	dbUseArea(.T., "TOPCONN", TCGenQry(,,cQuery), 'QUERY', .F., .T.)
 	Count To nRec
