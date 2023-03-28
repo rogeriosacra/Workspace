@@ -24,7 +24,7 @@ Local oReport
 Private cPerg := "ETRL11"
 
 If FindFunction("TRepInUse") .And. TRepInUse() //relatorio personalizavel
-	//旼컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴커
+	//旼컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴	컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴커
 	//쿔nterface de impressao                                                  �
 	//읕컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴켸
 	oReport:= ReportDef() //Chama a fun豫o para carregar a Classe tReport
