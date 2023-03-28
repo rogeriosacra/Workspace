@@ -63,7 +63,7 @@ Static Function RELEX1(cProdDe,cProdAte)
 	Private cArqTxt := "C:\EXCEL\RELEXCELI.CSV"
 	Private nHdl    := fCreate(cArqTxt)
 	Private cEOL    := "CHR(13)+CHR(10)"
-	MakeDir("C:\EXCEL\")
+	MakeDir("C:\EXCEL\")//Cria diretório caso não exista
 
 
 
