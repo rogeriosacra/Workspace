@@ -16,7 +16,7 @@
 ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
 /*/
 
-User Function MA030BUT()
+User Function MA030BUT() //Exemplo de ponto de entrada
 
 
 	aButtons := {}
