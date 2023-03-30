@@ -71,7 +71,7 @@ Static Function Execquebra()
 		aItemPV			:= {}
 		dbSelectArea("SA1")
 		dbSetOrder(1)
-		dbSeek(xFilial()+TRB->C5_CLIENTE)
+		dbSeek(xFilial()+TRB->C5_CLIENTE) 
 
 		dbSelectArea("SC5")
 		dbSetOrder(1)
