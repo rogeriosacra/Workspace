@@ -165,8 +165,11 @@
 		},
 		{
 			"label": "u_MPSmybind"
+		},
+		{
+			"label": "U_zTeste"
 		}
 	],
-	"lastProgramExecuted": "SIGAMDI",
+	"lastProgramExecuted": "U_zTeste",
 	"lastProgramArgumens": []
 }

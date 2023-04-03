@@ -224,7 +224,7 @@ User Function FINAT3Func()
 		@ 090,085 MSGET dDataE SIZE 45,10 OF oDlg PIXEL Valid VerData(1)
 		@ 102,020 Say OemToAnsi("Data Pagamento") SIZE 60,10 OF oDlg PIXEL
 		@ 102,085 MSGET dDataP SIZE 45,10 OF oDlg PIXEL Valid VerData(2)
-		oGetDb := MsGetDB():New(10,140,130,420,1,"Allwaystrue","Allwaystrue","",.F.,aAlter,,,,"TIT",,,,,,.T.)
+		oGetDb := MsGetDB():New(10,140,130,420,1,"Allwaystrue","Allwaystrue","",.F.,aAlter,,,,"TIT",,,,,,.T.)// aAlter contém campos que permitem alteração
 
 		DEFINE SBUTTON FROM 137,323 TYPE 1 ACTION (Iif(!Empty(cPrefix).And.!Empty(cTipo),(nOpca:=1,oDlg:End()),MsgStop("O campo Pefixo e Tipo devem estar preenchidos"))) Of oDlg PIXEL ENABLE
 		DEFINE SBUTTON FROM 137,350 TYPE 2 ACTION oDlg:End() ENABLE OF oDlg

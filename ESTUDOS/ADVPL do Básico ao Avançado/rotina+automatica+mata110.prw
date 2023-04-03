@@ -27,7 +27,7 @@ User Function RAMATA110()
 //VERIFICA SE JA EXISTE UM SOLICITACAO GERADA, PARA OS CASOS DE UMA RE-IMPORTACAO DO ARQUIVO
 	cQuery := " SELECT * FROM "+RetSqlName("SB1")+" "+ENTER
 	cQuery += " WHERE D_E_L_E_T_ <> '*'"+ENTER
-	cQuery += " AND NOT EXISTS(SELECT 'S' FROM "+RetSqlName("SC1")+" C1 WHERE C1_FILIAL =  '"+xFilial("SC1")+"' AND C1_PRODUTO = B1_COD AND C1.D_E_L_E_T_ <> '*' AND C1_EMISSAO = '"+Dtos(dDataBase)+"')"+ENTER
+	cQuery += " AND NOT EXISTS(SELECT 'S' FROM "+RetSqlName("SC1")+" C1 WHERE C1_FILIAL =  '"+xFilial("SC1")+"' AND C1_PRODUTO = B1_COD AND C1.D_E_L_E_T_ <> '*' AND C1_EMISSAO < '"+Dtos(dDataBase)+"')"+ENTER
 	cQuery += " AND B1_TIPO IN ('MP','ME')"+ENTER
 	cQuery += " AND B1_FILIAL = '"+xFilial("SB1")+"'"+ENTER
 
@@ -52,7 +52,7 @@ User Function RAMATA110()
 
 	While !Eof()
 
-//CABECALHO DA SOLICITACAO
+//CABECALHO DA SOLICITACAO // MODELO 2
 		aCab := {{"C1_EMISSAO" ,dDataBase  	  ,Nil},;  // Data de Emissao
 		{"C1_FORNECE" ,""			  ,Nil},; // Fornecedor
 		{"C1_LOJA"    ,""			  ,Nil},;  // Loja do Fornecedor
