@@ -17,9 +17,9 @@ User Function IVisual()
 
 Local cTitulo := "Aula MsDialog"
 Local cTexto  := "Cnpj"
-Local cCGC    := SPACE(13)
 Local nOPca   := 0
 Private oDlg
+Private cCGC  := SPACE(13)
 
 
     DEFINE MSDIALOG oDlg TITLE cTitulo FROM 000,000 to 080,300 PIXEL
