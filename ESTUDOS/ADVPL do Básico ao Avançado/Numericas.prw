@@ -11,7 +11,7 @@ User Function NUMERICAS()
 
 	nNumero := 13/2
 	nResultado := nNumero
-	Round(nResultado,2)
+	nResultado := Round(nResultado,2)
 
     Alert("Valor de nResultado = "+cValtochar(nResultado))
 

@@ -31,7 +31,7 @@ User Function manipulacao()
 	RpcSetType(3)
 	PREPARE ENVIRONMENT EMPRESA "99" FILIAL "01" MODULO "FAT"
 
-	DbSelectArea(cArea)
+	DbSelectArea(cArea+xFilial())
 	DbSetOrder(1)// Opação ao dbsetorder: DBORDERNICKNAME("Z1CLIENTE") UTILIZA O NICKNAME DO INDICE
 	DbGotop()
 
@@ -43,7 +43,7 @@ User Function manipulacao()
 		MSUNLOCK()
 	else*/
 		RecLock("SZ1",.T.)
-		Z1_FILIAL  := xFilial()
+		Z1_FILIAL  := XFilial("SZ1")
 		Z1_CLIENTE := GetSx8Num("SA1","A1_COD")
 		Z1_LOJA    := "01"
 		Z1_PRODUTO := "000001"
@@ -51,11 +51,12 @@ User Function manipulacao()
 		Z1_UMCLI   := "CX"
 		Z1_TIPO    := "D"
 		Z1_FATOR   := 100.00
-		MSUNLOCK()
 		ConfirmSX8()
+		MSUNLOCK()
+		
 	//EndIF
 
-	DbSelectArea("SA1")
+	DbSelectArea("SA1"+XFilial())
 	DbSetOrder(1)// Opação ao dbsetorder: DBORDERNICKNAME("Z1CLIENTE") UTILIZA O NICKNAME DO INDICE
 	DbGotop()
 
@@ -70,7 +71,7 @@ User Function manipulacao()
 
 	cCodProd := FwInputBox("Informe o código do produto",)
 
-	DbSelectArea("SB1")
+	DbSelectArea("SB1"+xFilial())
 	DbSetOrder(1)// Opação ao dbsetorder: DBORDERNICKNAME("Z1CLIENTE") UTILIZA O NICKNAME DO INDICE
 	DbGotop()
 

@@ -21,10 +21,10 @@ RETURN
 //PONTO DE ENTRADA
 USER FUNCTION PEcexb()
 
-	LOCAL cNota := PARAMIXB[1]
-	LOCAL cSerie:= PARAMIXB[2]
+	LOCAL cNota :=   PARAMIXB[1]
+	LOCAL cSerie:=   PARAMIXB[2]
 	LOCAL cFornece:= PARAMIXB[3]
-	LOCAL cLoja:= PARAMIXB[4]
+	LOCAL cLoja:=    PARAMIXB[4]
 
 	ApMsgAlert('Nota: '+cNota)
 	ApMsgAlert('Serie: '+cSerie)
