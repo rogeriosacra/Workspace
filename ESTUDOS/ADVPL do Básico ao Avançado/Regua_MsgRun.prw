@@ -1,4 +1,10 @@
-#include "Protheus.ch"
+#INCLUDE 'protheus.ch'
+#INCLUDE 'vkey.ch'
+#INCLUDE 'Rwmake.ch'
+#INCLUDE 'msmgadd.ch'
+#INCLUDE 'tbiconn.ch'
+#INCLUDE 'tbicode.ch'
+#Include 'TopConn.ch'
 
 //------------------------------------------------------------------------------------------
 /*/{Protheus.doc} regua processa
@@ -11,6 +17,9 @@ regua para relatorios
 
 USER FUNCTION PBMsgRun()
 	LOCAL nCnt := 0
+	
+	Prepare Environment  EMPRESA "99" FILIAL "01"  MODULO "FAT"
+	
 	dbSelectArea("SX1")
 	dbGoTop()
 	MsgRun("Lendo arquivo, aguarde...","Título opcional",{||dbEval({|x| nCnt++}) })

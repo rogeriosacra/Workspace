@@ -180,9 +180,11 @@
 		{
 			"args": [],
 			"label": "u_tstfun"
+		},
+		{
+			"label": "U_PBMsgRun"
 		}
 	],
-	"lastProgramExecuted": "u_tstfun",
-	"lastProgramArgumens": [],
-	"lastProgramArguments": []
+	"lastProgramExecuted": "U_PBMsgRun",
+	"lastProgramArgumens": []
 }
