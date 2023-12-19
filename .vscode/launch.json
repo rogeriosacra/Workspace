@@ -176,8 +176,13 @@
 		{
 			"args": [],
 			"label": "u_IVisual"
+		},
+		{
+			"args": [],
+			"label": "u_tstfun"
 		}
 	],
-	"lastProgramExecuted": "u_manipulacao",
-	"lastProgramArgumens": []
+	"lastProgramExecuted": "u_tstfun",
+	"lastProgramArgumens": [],
+	"lastProgramArguments": []
 }
