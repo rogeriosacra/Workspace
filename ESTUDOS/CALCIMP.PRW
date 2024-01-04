@@ -19,7 +19,7 @@ Return
 
 Static Function Calc(nValProd1,nTaxaImp2)
 
-Local nResult   := 0
+Local nResult  := 0
 
 
 nResult  := nValProd1 * (nTaxaImp2/100)
